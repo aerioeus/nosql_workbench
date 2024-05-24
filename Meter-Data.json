@@ -1,0 +1,1050 @@
+{
+  "ModelName": "Meter-Data",
+  "ModelMetadata": {
+    "Author": "",
+    "DateCreated": "Mar 21, 2023, 03:44 PM",
+    "DateLastModified": "Mar 22, 2023, 05:42 PM",
+    "Description": "",
+    "AWSService": "Amazon DynamoDB",
+    "Version": "3.0"
+  },
+  "DataModel": [
+    {
+      "TableName": "metermanagement",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "PK",
+          "AttributeType": "S"
+        },
+        "SortKey": {
+          "AttributeName": "SK",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "item_type",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_point_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "building_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "pod_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "malo_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "street",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "place",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "zip",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_kind",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_function",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_hierarchy",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_profile_type",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_serial_number",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_design",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_counting_type",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_manufacturer",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_calibration_period",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_interface_technology",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_value",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_unit",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_reader",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_installation_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_installed_by",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "start_value_meter_new",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "final_value_meter_old",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "type_meter_installation",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_id_uninstalled",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "month",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "year",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_installation_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_serial_number_old",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_id_old",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_installation_history_type",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_id",
+          "AttributeType": "S"
+        }
+      ],
+      "GlobalSecondaryIndexes": [
+        {
+          "IndexName": "GSI_1",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "SK",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "PK",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        }
+      ],
+      "TableData": [
+        {
+          "PK": {
+            "S": "MPID#P-00002-01-MG-001"
+          },
+          "SK": {
+            "S": "B#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "METER POINT"
+          },
+          "meter_point_id": {
+            "S": "P-00002-01-MG-001"
+          },
+          "pod_id": {
+            "S": "POD-00002-01"
+          },
+          "malo_id": {
+            "S": "50060880710"
+          },
+          "street": {
+            "S": "Karl-Liebknecht-Straße 91"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "zip": {
+            "S": "14482"
+          },
+          "meter_kind": {
+            "S": "Gas"
+          },
+          "meter_function": {
+            "S": "G02"
+          },
+          "meter_hierarchy": {
+            "S": "direct_counting"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00002-01-MH-001"
+          },
+          "SK": {
+            "S": "B#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "METER POINT"
+          },
+          "meter_point_id": {
+            "S": "P-00002-01-MH-001"
+          },
+          "pod_id": {
+            "S": "POD-00002-01"
+          },
+          "street": {
+            "S": "Karl-Liebknecht-Straße 91"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "zip": {
+            "S": "14482"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_function": {
+            "S": "W02"
+          },
+          "meter_hierarchy": {
+            "S": "direct_counting"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00009-01-MH-002"
+          },
+          "SK": {
+            "S": "B#BUI-00002#Berlin"
+          },
+          "item_type": {
+            "S": "METER POINT"
+          },
+          "meter_point_id": {
+            "S": " P-00009-01-MH-002"
+          },
+          "pod_id": {
+            "S": "POD-00009-01"
+          },
+          "street": {
+            "S": "Oraniendamm 10-6"
+          },
+          "place": {
+            "S": "Berlin"
+          },
+          "zip": {
+            "S": "13469"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_function": {
+            "S": "W01"
+          },
+          "meter_hierarchy": {
+            "S": "direct_counting"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00003-01-MS-001"
+          },
+          "SK": {
+            "S": "B#BUI-00003#Wittstock"
+          },
+          "item_type": {
+            "S": "METER POINT"
+          },
+          "meter_point_id": {
+            "S": "P-00003-01-MS-001"
+          },
+          "pod_id": {
+            "S": "POD-00003-01"
+          },
+          "street": {
+            "S": "Käthe-Kollwitz-Straße 29"
+          },
+          "place": {
+            "S": "Wittstock"
+          },
+          "zip": {
+            "S": "16909"
+          },
+          "meter_kind": {
+            "S": "Strom"
+          },
+          "meter_function": {
+            "S": "S01"
+          },
+          "meter_hierarchy": {
+            "S": "direct_counting"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#G000140"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "METER"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": "7GMT0008942175"
+          },
+          "meter_design": {
+            "S": "digital"
+          },
+          "meter_counting_type": {
+            "S": "Quantity meter"
+          },
+          "meter_manufacturer": {
+            "S": "Elster"
+          },
+          "meter_calibration_period": {
+            "S": "2022"
+          },
+          "meter_interface_technology": {
+            "S": "Impuls"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#W000040"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MH-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "METER"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "10041641"
+          },
+          "meter_design": {
+            "S": "digital"
+          },
+          "meter_counting_type": {
+            "S": "Quantity meter"
+          },
+          "meter_manufacturer": {
+            "S": "Siemens"
+          },
+          "meter_calibration_period": {
+            "S": "2029"
+          },
+          "meter_interface_technology": {
+            "S": "M-Bus"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#W000240"
+          },
+          "SK": {
+            "S": "MPID#P-00009-01-MH-002#BUI-00002#Berlin"
+          },
+          "item_type": {
+            "S": "METER"
+          },
+          "building_id": {
+            "S": "BUI-00002"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "80383495"
+          },
+          "meter_design": {
+            "S": "analog"
+          },
+          "meter_counting_type": {
+            "S": "Quantity meter"
+          },
+          "meter_manufacturer": {
+            "S": "Landis+Gyr"
+          },
+          "meter_calibration_period": {
+            "S": "2027"
+          },
+          "meter_interface_technology": {
+            "S": "M-Bus"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#W000320"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MH-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "METER"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "10030507"
+          },
+          "meter_design": {
+            "S": "digital"
+          },
+          "meter_counting_type": {
+            "S": "Quantity meter"
+          },
+          "meter_manufacturer": {
+            "S": "Kamstrup"
+          },
+          "meter_calibration_period": {
+            "S": "2026"
+          },
+          "meter_interface_technology": {
+            "S": "M-Bus"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#S000110"
+          },
+          "SK": {
+            "S": "MPID#P-00009-01-MS-002#BUI-00003#Wittstock"
+          },
+          "item_type": {
+            "S": "METER"
+          },
+          "building_id": {
+            "S": "BUI-00003"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "115829250"
+          },
+          "meter_design": {
+            "S": "digital"
+          },
+          "meter_counting_type": {
+            "S": "Quantity meter"
+          },
+          "meter_manufacturer": {
+            "S": "EASY Meter"
+          },
+          "meter_calibration_period": {
+            "S": "2027"
+          },
+          "meter_interface_technology": {
+            "S": "M-Bus"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#G000155"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "METER"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": "8GMT0008943098"
+          },
+          "meter_design": {
+            "S": "digital"
+          },
+          "meter_counting_type": {
+            "S": "Quantity meter"
+          },
+          "meter_manufacturer": {
+            "S": "Elster"
+          },
+          "meter_calibration_period": {
+            "S": "2029"
+          },
+          "meter_interface_technology": {
+            "S": "Impuls"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#G000140#2021#Dec"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": "7GMT0008942175"
+          },
+          "meter_reading_value": {
+            "S": "225"
+          },
+          "meter_reading_unit": {
+            "S": "cbm"
+          },
+          "meter_reading_date": {
+            "S": "2021-12-21T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Meyer"
+          },
+          "month": {
+            "S": "December"
+          },
+          "year": {
+            "S": "2021"
+          },
+          "meter_id": {
+            "S": "G000140"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#G000155#2022#Jan"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": "7GMT0008942175"
+          },
+          "meter_reading_value": {
+            "S": "12"
+          },
+          "meter_reading_unit": {
+            "S": "cbm"
+          },
+          "meter_reading_date": {
+            "S": "2022-02-01T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Meyer"
+          },
+          "month": {
+            "S": "January"
+          },
+          "year": {
+            "S": "2022"
+          },
+          "meter_id": {
+            "S": "G000155"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#G000155#2022#Feb"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": "7GMT0008942175"
+          },
+          "meter_reading_value": {
+            "S": "45"
+          },
+          "meter_reading_unit": {
+            "S": "cbm"
+          },
+          "meter_reading_date": {
+            "S": "2022-02-28T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Meyer"
+          },
+          "month": {
+            "S": "February"
+          },
+          "year": {
+            "S": "2022"
+          },
+          "meter_id": {
+            "S": "G000155"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#W000240#2021#Nov"
+          },
+          "SK": {
+            "S": "MPID#P-00009-01-MH-002#BUI-00002#Berlin"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00002"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "80383495"
+          },
+          "meter_reading_value": {
+            "S": "5050"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2021-11-29T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Kohla"
+          },
+          "month": {
+            "S": "November"
+          },
+          "year": {
+            "S": "2021"
+          },
+          "meter_id": {
+            "S": "W000240"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#W000040#2021#Nov"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MH-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "10041641"
+          },
+          "meter_reading_value": {
+            "S": "8820"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2021-11-30T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Sauter"
+          },
+          "month": {
+            "S": "November"
+          },
+          "year": {
+            "S": "2021"
+          },
+          "meter_id": {
+            "S": "W000040"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#W000320#2021#Dec"
+          },
+          "SK": {
+            "S": "MPID#P-00009-01-MH-002#BUI-00002#Berlin"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00002"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "10030507"
+          },
+          "meter_reading_value": {
+            "S": "45"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2022-01-02T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Sauter"
+          },
+          "month": {
+            "S": "December"
+          },
+          "year": {
+            "S": "2021"
+          },
+          "meter_id": {
+            "S": "W000320"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#W000040#2021#Dec"
+          },
+          "SK": {
+            "S": "MPID#P-00002-01-MH-001#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "10041641"
+          },
+          "meter_reading_value": {
+            "S": "8912"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2022-01-02T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Kohla"
+          },
+          "month": {
+            "S": "December"
+          },
+          "year": {
+            "S": "2021"
+          },
+          "meter_id": {
+            "S": "W000040"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#W000320#2022#Jan"
+          },
+          "SK": {
+            "S": "MPID#P-00009-01-MH-002#BUI-00002#Berlin"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00002"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "10030507"
+          },
+          "meter_reading_value": {
+            "S": "112"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2022-02-24T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Sauter"
+          },
+          "month": {
+            "S": "January"
+          },
+          "year": {
+            "S": "2022"
+          },
+          "meter_id": {
+            "S": "W000320"
+          }
+        },
+        {
+          "PK": {
+            "S": "READ#S000110#2021#Feb"
+          },
+          "SK": {
+            "S": "MPID#P-00009-01-MS-002#BUI-00003#Wittstock"
+          },
+          "item_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "BUI-00003"
+          },
+          "meter_kind": {
+            "S": "Strom"
+          },
+          "meter_serial_number": {
+            "S": "115829250"
+          },
+          "meter_reading_value": {
+            "S": "42422"
+          },
+          "meter_reading_unit": {
+            "S": "kWh"
+          },
+          "meter_reading_date": {
+            "S": "2021-03-01T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Sauter"
+          },
+          "month": {
+            "S": "February"
+          },
+          "year": {
+            "S": "2021"
+          },
+          "meter_id": {
+            "S": "S000110"
+          }
+        },
+        {
+          "PK": {
+            "S": "INST#2022#Jan#G000155"
+          },
+          "SK": {
+            "S": "B#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "METER INSTALLATION"
+          },
+          "meter_point_id": {
+            "S": "P-00002-01-MH-001"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "pod_id": {
+            "S": "POD-00002-01"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "meter_kind": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": "8GMT0008943098"
+          },
+          "meter_installation_date": {
+            "S": "2022-01-02T12:00:00"
+          },
+          "meter_installed_by": {
+            "S": "XCY"
+          },
+          "start_value_meter_new": {
+            "S": "0"
+          },
+          "final_value_meter_old": {
+            "S": "312"
+          },
+          "meter_serial_number_old": {
+            "S": "7GMT0008942175"
+          },
+          "meter_id_old": {
+            "S": "G000140"
+          },
+          "meter_installation_history_type": {
+            "S": "replacement"
+          },
+          "meter_id": {
+            "S": "G000155"
+          }
+        },
+        {
+          "PK": {
+            "S": "INST#2021#Dec#W000320"
+          },
+          "SK": {
+            "S": "B#BUI-00001#Potsdam"
+          },
+          "item_type": {
+            "S": "METER INSTALLATION"
+          },
+          "meter_point_id": {
+            "S": "P-00002-01-MH-001"
+          },
+          "building_id": {
+            "S": "BUI-00001"
+          },
+          "pod_id": {
+            "S": "POD-00002-01"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "meter_kind": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "10030507"
+          },
+          "meter_installation_date": {
+            "S": "2021-12-12T12:00:00"
+          },
+          "meter_installed_by": {
+            "S": "KATACA"
+          },
+          "start_value_meter_new": {
+            "S": "0"
+          },
+          "final_value_meter_old": {
+            "S": "5088"
+          },
+          "meter_serial_number_old": {
+            "S": "80383495"
+          },
+          "meter_id_old": {
+            "S": "W000240"
+          },
+          "meter_installation_history_type": {
+            "S": "replacement"
+          },
+          "meter_id": {
+            "S": "W000320"
+          }
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+{
+  "ModelName": "project management tool",
+  "ModelMetadata": {
+    "Author": "ar",
+    "DateCreated": "Jan 04, 2022, 09:56 PM",
+    "DateLastModified": "Jan 06, 2022, 02:19 PM",
+    "Description": "",
+    "AWSService": "Amazon DynamoDB",
+    "Version": "3.0"
+  },
+  "DataModel": [
+    {
+      "TableName": "projecttool",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "PK",
+          "AttributeType": "S"
+        },
+        "SortKey": {
+          "AttributeName": "SK",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "EntityType",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Org_Id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Project_Id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Employee_Id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Project_Employee",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Email",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Data",
+          "AttributeType": "S"
+        }
+      ],
+      "GlobalSecondaryIndexes": [
+        {
+          "IndexName": "GSI-1",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "SK",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "PK",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        },
+        {
+          "IndexName": "GSI-2",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "PK",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "Data",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        }
+      ],
+      "TableData": [
+        {
+          "PK": {
+            "S": " ORG#12345"
+          },
+          "SK": {
+            "S": "#METADATA#12345"
+          },
+          "EntityType": {
+            "S": "organization"
+          },
+          "Name": {
+            "S": "acqeos"
+          },
+          "Org_Id": {
+            "S": "ORG#12345"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORG#12345"
+          },
+          "SK": {
+            "S": "#PRO#agile#12345"
+          },
+          "EntityType": {
+            "S": "project"
+          },
+          "Name": {
+            "S": "Project A"
+          },
+          "Project_Id": {
+            "S": "#PRO12345"
+          },
+          "Data": {
+            "S": "PRO#Project A"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORG#12345"
+          },
+          "SK": {
+            "S": "#PRO#agile#6798"
+          },
+          "EntityType": {
+            "S": "project"
+          },
+          "Name": {
+            "S": "Project B"
+          },
+          "Project_Id": {
+            "S": "#PRO6798"
+          },
+          "Data": {
+            "S": "PRO#Project B"
+          }
+        },
+        {
+          "PK": {
+            "S": " ORG#12345"
+          },
+          "SK": {
+            "S": "#PRO#fixed-bid#77662"
+          },
+          "EntityType": {
+            "S": "project"
+          },
+          "Name": {
+            "S": "Project Z"
+          },
+          "Project_Id": {
+            "S": "#PRO77662"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORG#12345"
+          },
+          "SK": {
+            "S": "#PRO#fixed-bid#82382"
+          },
+          "EntityType": {
+            "S": "project"
+          },
+          "Name": {
+            "S": "Project Y"
+          },
+          "Project_Id": {
+            "S": "#PRO82382"
+          }
+        },
+        {
+          "PK": {
+            "S": " ORG#12345"
+          },
+          "SK": {
+            "S": "#PRO#fixed-bid#93838"
+          },
+          "EntityType": {
+            "S": "project"
+          },
+          "Name": {
+            "S": "Project X"
+          },
+          "Project_Id": {
+            "S": "#PRO93838"
+          }
+        },
+        {
+          "PK": {
+            "S": " ORG#12345"
+          },
+          "SK": {
+            "S": "EMP#223344"
+          },
+          "EntityType": {
+            "S": "employee"
+          },
+          "Name": {
+            "S": "Mark Myers"
+          },
+          "Employee_Id": {
+            "S": "223344"
+          },
+          "Email": {
+            "S": "mmy@example.com"
+          },
+          "Date": {
+            "S": "EMP#22-10-12"
+          },
+          "Data": {
+            "S": "EMP#Mark Myers"
+          }
+        },
+        {
+          "PK": {
+            "S": " ORG#12345"
+          },
+          "SK": {
+            "S": "EMP#445566"
+          },
+          "EntityType": {
+            "S": "employee"
+          },
+          "Name": {
+            "S": "Clara Marx"
+          },
+          "Employee_Id": {
+            "S": "445566"
+          },
+          "Email": {
+            "S": "cm@example.com"
+          },
+          "Date": {
+            "S": "EMP#10-10-12"
+          },
+          "Data": {
+            "S": "EMP#Clara Marx"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORG#12345"
+          },
+          "SK": {
+            "S": "EMP#992421"
+          },
+          "EntityType": {
+            "S": "employee"
+          },
+          "Name": {
+            "S": "Jane Doe"
+          },
+          "Employee_Id": {
+            "S": "992421"
+          },
+          "Email": {
+            "S": "jd@example.com"
+          },
+          "Date": {
+            "S": "EMP#18-10-12"
+          },
+          "Data": {
+            "S": "EMP#Jane Doe"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORG#12345#PRO#6798"
+          },
+          "SK": {
+            "S": "EMP#Clara Marx"
+          },
+          "EntityType": {
+            "S": "project-employee"
+          },
+          "Name": {
+            "S": "Clara Marx"
+          },
+          "Project_Id": {
+            "S": "6798"
+          },
+          "Date": {
+            "S": "ORG#PRO#18-10-12"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORG#12345#PRO#6798"
+          },
+          "SK": {
+            "S": "EMP#Jane Doe"
+          },
+          "EntityType": {
+            "S": "project-employee"
+          },
+          "Name": {
+            "S": "Jane Doe"
+          },
+          "Project_Id": {
+            "S": "6798"
+          },
+          "Date": {
+            "S": "ORG#PRO#18-10-12"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORG#88888"
+          },
+          "SK": {
+            "S": "#METADATA#88888"
+          },
+          "EntityType": {
+            "S": "organization"
+          },
+          "Name": {
+            "S": "energicos"
+          },
+          "Org_Id": {
+            "S": "ORG#88888"
+          }
+        },
+        {
+          "PK": {
+            "S": " ORG#12345#PRO#12345"
+          },
+          "SK": {
+            "S": "EMP#Jane Doe"
+          },
+          "EntityType": {
+            "S": "project-employee"
+          },
+          "Name": {
+            "S": "Jane Doe"
+          },
+          "Project_Id": {
+            "S": "12345"
+          },
+          "Date": {
+            "S": "ORG#PRO#18-10-12"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORG#12345#PRO#93838"
+          },
+          "SK": {
+            "S": "EMP#Mark Myers"
+          },
+          "EntityType": {
+            "S": "project-employee"
+          },
+          "Name": {
+            "S": "Mark Myers"
+          },
+          "Project_Id": {
+            "S": "93838"
+          },
+          "Date": {
+            "S": "ORG#PRO#18-10-12"
+          }
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    }
+  ]
+}

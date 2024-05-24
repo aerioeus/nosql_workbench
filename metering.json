@@ -1,0 +1,802 @@
+{
+  "ModelName": "Metering",
+  "ModelMetadata": {
+    "Author": "",
+    "DateCreated": "Jul 17, 2022, 06:19 PM",
+    "DateLastModified": "Jul 24, 2022, 01:45 PM",
+    "Description": "",
+    "AWSService": "Amazon DynamoDB",
+    "Version": "3.0"
+  },
+  "DataModel": [
+    {
+      "TableName": "Metering",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "PK",
+          "AttributeType": "S"
+        },
+        "SortKey": {
+          "AttributeName": "SK",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "entity_type",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "street",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "place",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "zip",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_type",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "building_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_serial_number",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_value",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_unit",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_reader",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_reading_extra_info",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_installer_person",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "final_value_meter",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "start_value_meter",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "type meter_installation",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_point_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_id",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_installation_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_id_uninstalled",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_valid_to",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "consumption",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "meter_function",
+          "AttributeType": "S"
+        }
+      ],
+      "GlobalSecondaryIndexes": [
+        {
+          "IndexName": "GSI1",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "SK",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "PK",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        },
+        {
+          "IndexName": "GSI2",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "type meter_installation",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "meter_point_id",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        },
+        {
+          "IndexName": "GSI3",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "meter_valid_to",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "SK",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        }
+      ],
+      "TableData": [
+        {
+          "PK": {
+            "S": "MPID#P-00001-01-MG-002"
+          },
+          "SK": {
+            "S": "B#BUI00001"
+          },
+          "entity_type": {
+            "S": "METER POINT"
+          },
+          "street": {
+            "S": "Oraniendamm 10-6"
+          },
+          "place": {
+            "S": "Berlin"
+          },
+          "zip": {
+            "S": "13469 "
+          },
+          "meter_type": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": " "
+          },
+          "meter_point_id": {
+            "S": "MPID#P-00001-01-MG-002"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00001-01-MH-001"
+          },
+          "SK": {
+            "S": "B#BUI00001"
+          },
+          "entity_type": {
+            "S": "METER POINT"
+          },
+          "street": {
+            "S": "Oraniendamm 10-6"
+          },
+          "place": {
+            "S": "Berlin"
+          },
+          "zip": {
+            "S": "13469 "
+          },
+          "meter_type": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": " "
+          },
+          "meter_point_id": {
+            "S": "P-00001-01-MH-001"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00002-01-MH-001"
+          },
+          "SK": {
+            "S": "B#BUI00002"
+          },
+          "entity_type": {
+            "S": "METER POINT"
+          },
+          "street": {
+            "S": "Karl-Liebknecht-Straße 91"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "zip": {
+            "S": "14482 "
+          },
+          "meter_type": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": " "
+          },
+          "meter_point_id": {
+            "S": "P-00002-01-MH-001"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00002-01-MG-002"
+          },
+          "SK": {
+            "S": "B#BUI00002"
+          },
+          "entity_type": {
+            "S": "METER POINT"
+          },
+          "street": {
+            "S": "Karl-Liebknecht-Straße 91"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "zip": {
+            "S": "14482 "
+          },
+          "meter_type": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": " "
+          },
+          "meter_point_id": {
+            "S": "P-00002-01-MG-002"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00002-01-MC-003"
+          },
+          "SK": {
+            "S": "B#BUI00002"
+          },
+          "entity_type": {
+            "S": "METER POINT"
+          },
+          "street": {
+            "S": "Karl-Liebknecht-Straße 91"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "zip": {
+            "S": "14482 "
+          },
+          "meter_type": {
+            "S": "Cold_Water"
+          },
+          "meter_serial_number": {
+            "S": " "
+          },
+          "meter_point_id": {
+            "S": "P-00002-01-MC-003"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#G000140"
+          },
+          "SK": {
+            "S": "B#BUI00001"
+          },
+          "entity_type": {
+            "S": "METER"
+          },
+          "street": {
+            "S": "Oraniendamm 10-6"
+          },
+          "place": {
+            "S": "Berlin"
+          },
+          "zip": {
+            "S": "13469 "
+          },
+          "meter_type": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": "4458803"
+          },
+          "meter_point_id": {
+            "S": "MPID#P-00001-01-MG-002"
+          },
+          "meter_installation_date": {
+            "S": "2022-01-01T12:00:00"
+          },
+          "meter_function": {
+            "S": "G02"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#W000957"
+          },
+          "SK": {
+            "S": "B#BUI00001"
+          },
+          "entity_type": {
+            "S": "METER"
+          },
+          "street": {
+            "S": "Oraniendamm 10-6"
+          },
+          "place": {
+            "S": "Berlin"
+          },
+          "zip": {
+            "S": "13469 "
+          },
+          "meter_type": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "65685009"
+          },
+          "meter_point_id": {
+            "S": "MPID#P-00001-01-MH-001"
+          },
+          "meter_installation_date": {
+            "S": "2022-01-01T12:00:00"
+          },
+          "meter_function": {
+            "S": "W05"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#G000003"
+          },
+          "SK": {
+            "S": "B#BUI00002"
+          },
+          "entity_type": {
+            "S": "METER"
+          },
+          "street": {
+            "S": "Karl-Liebknecht-Straße 91"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "zip": {
+            "S": "14482 "
+          },
+          "meter_type": {
+            "S": "Gas"
+          },
+          "meter_serial_number": {
+            "S": "6335935"
+          },
+          "meter_point_id": {
+            "S": "MPID#P-00002-01-MH-001"
+          },
+          "meter_installation_date": {
+            "S": "2022-01-01T12:00:00"
+          },
+          "meter_valid_to": {
+            "S": "2022-07-31T12:00:"
+          },
+          "meter_function": {
+            "S": "G01"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#W000955"
+          },
+          "SK": {
+            "S": "B#BUI00002"
+          },
+          "entity_type": {
+            "S": "METER"
+          },
+          "street": {
+            "S": "Karl-Liebknecht-Straße 91"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "zip": {
+            "S": "14482 "
+          },
+          "meter_type": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "3102531"
+          },
+          "meter_point_id": {
+            "S": "MPID#P-00002-01-MG-002"
+          },
+          "meter_installation_date": {
+            "S": "2022-01-01T12:00:00"
+          },
+          "meter_function": {
+            "S": "W04"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#K000003"
+          },
+          "SK": {
+            "S": "B#BUI00002"
+          },
+          "entity_type": {
+            "S": "METER"
+          },
+          "street": {
+            "S": "Karl-Liebknecht-Straße 91"
+          },
+          "place": {
+            "S": "Potsdam"
+          },
+          "zip": {
+            "S": "14482 "
+          },
+          "meter_type": {
+            "S": "Cold_Water"
+          },
+          "meter_serial_number": {
+            "S": "3176484"
+          },
+          "meter_point_id": {
+            "S": "MPID#P-00002-01-MC-003"
+          },
+          "meter_installation_date": {
+            "S": "2022-01-01T12:00:00"
+          },
+          "meter_function": {
+            "S": "K02"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00194-01-MH-001"
+          },
+          "SK": {
+            "S": "B#BUI00194"
+          },
+          "entity_type": {
+            "S": "METER POINT"
+          },
+          "street": {
+            "S": "Käthe-Kollwitz-Straße 29"
+          },
+          "place": {
+            "S": "Wittstock"
+          },
+          "zip": {
+            "S": "16909 "
+          },
+          "meter_type": {
+            "S": "Heat"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#W000221"
+          },
+          "SK": {
+            "S": "B#BUI00194"
+          },
+          "entity_type": {
+            "S": "METER"
+          },
+          "street": {
+            "S": "Käthe-Kollwitz-Straße 29"
+          },
+          "place": {
+            "S": "Wittstock"
+          },
+          "zip": {
+            "S": "16909 "
+          },
+          "meter_type": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "36259364"
+          },
+          "meter_point_id": {
+            "S": "MPID#P-00194-01-MH-001"
+          },
+          "meter_installation_date": {
+            "S": "2022-01-01T12:00:00"
+          },
+          "meter_valid_to": {
+            "S": "2022-02-28T12:00:00"
+          },
+          "meter_function": {
+            "S": "W04"
+          }
+        },
+        {
+          "PK": {
+            "S": "M#W001093"
+          },
+          "SK": {
+            "S": "B#BUI00194"
+          },
+          "entity_type": {
+            "S": "METER REPLACEMENT"
+          },
+          "street": {
+            "S": "Käthe-Kollwitz-Straße 29"
+          },
+          "place": {
+            "S": "Wittstock"
+          },
+          "zip": {
+            "S": "16909 "
+          },
+          "meter_type": {
+            "S": "Heat"
+          },
+          "meter_serial_number": {
+            "S": "66095884"
+          },
+          "meter_installer_person": {
+            "S": "Eluh"
+          },
+          "final_value_meter": {
+            "S": "1.135,75"
+          },
+          "start_value_meter": {
+            "S": "0"
+          },
+          "type meter_installation": {
+            "S": "meter_replacement"
+          },
+          "meter_point_id": {
+            "S": "MPID#P-00194-01-MH-001"
+          },
+          "meter_installation_date": {
+            "S": "2022-02-28T12:00:00"
+          },
+          "meter_id_uninstalled": {
+            "S": "M#W000221"
+          },
+          "meter_function": {
+            "S": "W04"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00194-01-MH-001"
+          },
+          "SK": {
+            "S": "READ#Jan"
+          },
+          "entity_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "B#BUI00194"
+          },
+          "meter_serial_number": {
+            "S": "36259364"
+          },
+          "meter_reading_value": {
+            "S": "1.088,050"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2021-12-31T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Eluh"
+          },
+          "meter_id": {
+            "S": "M#W000221"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00194-01-MH-001"
+          },
+          "SK": {
+            "S": "READ#Feb"
+          },
+          "entity_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "B#BUI00194"
+          },
+          "meter_serial_number": {
+            "S": "36259364"
+          },
+          "meter_reading_value": {
+            "S": "1.112,555"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2022-01-29T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Eluh"
+          },
+          "meter_id": {
+            "S": "M#W000221"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00194-01-MH-001"
+          },
+          "SK": {
+            "S": "READ#Mar"
+          },
+          "entity_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "B#BUI00194"
+          },
+          "meter_serial_number": {
+            "S": "66095884"
+          },
+          "meter_reading_value": {
+            "S": "1,000"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2022-02-28T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Eluh"
+          },
+          "meter_id": {
+            "S": "M#W001093"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00194-01-MH-001"
+          },
+          "SK": {
+            "S": "READ#Apr"
+          },
+          "entity_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "B#BUI00194"
+          },
+          "meter_serial_number": {
+            "S": "66095884"
+          },
+          "meter_reading_value": {
+            "S": "22,194"
+          },
+          "meter_reading_unit": {
+            "S": "MWh"
+          },
+          "meter_reading_date": {
+            "S": "2022-03-28T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Eluh"
+          },
+          "meter_id": {
+            "S": "M#W001093"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00001-01-MG-002"
+          },
+          "SK": {
+            "S": "READ#Jan"
+          },
+          "entity_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "B#BUI00001"
+          },
+          "meter_serial_number": {
+            "S": "4458803"
+          },
+          "meter_reading_value": {
+            "S": "407.106,000"
+          },
+          "meter_reading_unit": {
+            "S": "cbm"
+          },
+          "meter_reading_date": {
+            "S": "2022-01-03T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Sauter"
+          },
+          "meter_id": {
+            "S": "M#G000140"
+          }
+        },
+        {
+          "PK": {
+            "S": "MPID#P-00001-01-MG-002"
+          },
+          "SK": {
+            "S": "READ#Feb"
+          },
+          "entity_type": {
+            "S": "READING"
+          },
+          "building_id": {
+            "S": "B#BUI00001"
+          },
+          "meter_serial_number": {
+            "S": "4458803"
+          },
+          "meter_reading_value": {
+            "S": "422.098,000"
+          },
+          "meter_reading_unit": {
+            "S": "cbm"
+          },
+          "meter_reading_date": {
+            "S": "2022-02-24T12:00:00"
+          },
+          "meter_reading_reader": {
+            "S": "Sauter"
+          },
+          "meter_id": {
+            "S": "M#G000140"
+          }
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "BillingMode": "PAY_PER_REQUEST"
+    }
+  ]
+}

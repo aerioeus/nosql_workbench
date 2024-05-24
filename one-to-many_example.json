@@ -1,0 +1,406 @@
+{
+  "ModelName": "one-to-many_example",
+  "ModelMetadata": {
+    "Author": "",
+    "DateCreated": "Jul 23, 2022, 02:19 PM",
+    "DateLastModified": "Jul 23, 2022, 04:30 PM",
+    "Description": "",
+    "AWSService": "Amazon DynamoDB",
+    "Version": "3.0"
+  },
+  "DataModel": [
+    {
+      "TableName": "customer_orders",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "PK",
+          "AttributeType": "S"
+        },
+        "SortKey": {
+          "AttributeName": "SK",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "Type",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "CustomerID",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "OrderID",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "LogID",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "GSI1PK",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "GSI1SK",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "QuestionID",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "ProductID",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Price",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Quantity",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Discount",
+          "AttributeType": "S"
+        }
+      ],
+      "GlobalSecondaryIndexes": [
+        {
+          "IndexName": "GSI1",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "GSI1PK",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "GSI1SK",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        }
+      ],
+      "TableData": [
+        {
+          "PK": {
+            "S": "CUSTOMER#XYQ"
+          },
+          "SK": {
+            "S": "CUSTOMER#XYQ"
+          },
+          "Type": {
+            "S": "CUSTOMER"
+          },
+          "Name": {
+            "S": "Tom"
+          },
+          "CustomerID": {
+            "S": "XYQ"
+          }
+        },
+        {
+          "PK": {
+            "S": "CUSTOMER#XYQ"
+          },
+          "SK": {
+            "S": "ORDER#00001"
+          },
+          "Type": {
+            "S": "ORDER"
+          },
+          "OrderID": {
+            "S": "00001"
+          },
+          "GSI1PK": {
+            "S": "CUSTOMER#XYQ#ORDER#00001"
+          },
+          "GSI1SK": {
+            "S": "ORDER#00001"
+          }
+        },
+        {
+          "PK": {
+            "S": "CUSTOMER#XYQ"
+          },
+          "SK": {
+            "S": "ORDER#00002"
+          },
+          "Type": {
+            "S": "ORDER"
+          },
+          "OrderID": {
+            "S": "00002"
+          },
+          "GSI1PK": {
+            "S": "CUSTOMER#XYQ#ORDER#00002"
+          },
+          "GSI1SK": {
+            "S": "ORDER#00002"
+          }
+        },
+        {
+          "PK": {
+            "S": "CUSTOMER#VLD"
+          },
+          "SK": {
+            "S": "CUSTOMER#VLD"
+          },
+          "Type": {
+            "S": "CUSTOMER"
+          },
+          "Name": {
+            "S": "Linda"
+          },
+          "CustomerID": {
+            "S": "VLD"
+          }
+        },
+        {
+          "PK": {
+            "S": "CUSTOMER#VLD"
+          },
+          "SK": {
+            "S": "ORDER#00003"
+          },
+          "Type": {
+            "S": "ORDER"
+          },
+          "OrderID": {
+            "S": "00003"
+          },
+          "GSI1PK": {
+            "S": "CUSTOMER#VLD#ORDER#00003"
+          },
+          "GSI1SK": {
+            "S": "ORDER#00003"
+          }
+        },
+        {
+          "PK": {
+            "S": "CUSTOMER#VLD"
+          },
+          "SK": {
+            "S": "ORDER#00004"
+          },
+          "Type": {
+            "S": "ORDER"
+          },
+          "OrderID": {
+            "S": "00004"
+          },
+          "GSI1PK": {
+            "S": "CUSTOMER#VLD#ORDER#00004"
+          },
+          "GSI1SK": {
+            "S": "ORDER#00004"
+          }
+        },
+        {
+          "PK": {
+            "S": "LOG#00001"
+          },
+          "SK": {
+            "S": "LOG#00001"
+          },
+          "Type": {
+            "S": "LOG"
+          },
+          "LogID": {
+            "S": "00001"
+          },
+          "GSI1PK": {
+            "S": "CUSTOMER#XYQ#ORDER#00001"
+          },
+          "GSI1SK": {
+            "S": "LOG#00001"
+          }
+        },
+        {
+          "PK": {
+            "S": "LOG#00002"
+          },
+          "SK": {
+            "S": "LOG#00002"
+          },
+          "Type": {
+            "S": "LOG"
+          },
+          "LogID": {
+            "S": "00002"
+          },
+          "GSI1PK": {
+            "S": "CUSTOMER#XYQ#ORDER#00001"
+          },
+          "GSI1SK": {
+            "S": "LOG#00002"
+          }
+        },
+        {
+          "PK": {
+            "S": "CUSTOMER#XYQ"
+          },
+          "SK": {
+            "S": "#QUESTION#99998"
+          },
+          "Type": {
+            "S": "QUESTION"
+          },
+          "QuestionID": {
+            "S": "00002"
+          }
+        },
+        {
+          "PK": {
+            "S": "CUSTOMER#XYQ"
+          },
+          "SK": {
+            "S": "#QUESTION#99999"
+          },
+          "Type": {
+            "S": "QUESTION"
+          },
+          "QuestionID": {
+            "S": "00001"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORDER#00001"
+          },
+          "SK": {
+            "S": "PROD#001"
+          },
+          "Type": {
+            "S": "ORDERDETAILS"
+          },
+          "CustomerID": {
+            "S": "XYQ"
+          },
+          "GSI1PK": {
+            "S": "PROD#001"
+          },
+          "GSI1SK": {
+            "S": "ORDER#00001"
+          },
+          "Price": {
+            "S": "135"
+          },
+          "Quantity": {
+            "S": "1000"
+          },
+          "Discount": {
+            "S": "29%"
+          }
+        },
+        {
+          "PK": {
+            "S": "ORDER#00001"
+          },
+          "SK": {
+            "S": "PROD#002"
+          },
+          "Type": {
+            "S": "ORDERDETAIL"
+          },
+          "CustomerID": {
+            "S": "XYQ"
+          },
+          "GSI1PK": {
+            "S": "PROD#002"
+          },
+          "GSI1SK": {
+            "S": "ORDER#00001"
+          },
+          "Price": {
+            "S": "77"
+          },
+          "Quantity": {
+            "S": "50"
+          },
+          "Discount": {
+            "S": "13%"
+          }
+        },
+        {
+          "PK": {
+            "S": "PROD#001"
+          },
+          "SK": {
+            "S": "PROD#001"
+          },
+          "Type": {
+            "S": "PRODUCT"
+          },
+          "GSI1PK": {
+            "S": "PROD#001"
+          },
+          "GSI1SK": {
+            "S": "PROD#001"
+          },
+          "Price": {
+            "S": "200"
+          }
+        },
+        {
+          "PK": {
+            "S": "PROD#002"
+          },
+          "SK": {
+            "S": "PROD#002"
+          },
+          "Type": {
+            "S": "PRODUCT"
+          },
+          "GSI1PK": {
+            "S": "PROD#002"
+          },
+          "GSI1SK": {
+            "S": "PROD#002"
+          },
+          "Price": {
+            "S": "100"
+          }
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    }
+  ]
+}
