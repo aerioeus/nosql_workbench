@@ -1,0 +1,6759 @@
+{
+  "ModelName": "NewASA_Dummy_Data",
+  "ModelMetadata": {
+    "Author": "RR",
+    "DateCreated": "May 27, 2024, 11:24 AM",
+    "DateLastModified": "May 29, 2024, 02:39 PM",
+    "Description": "This Data Model was created to insert dummy data for each newly created Item Type of the Redesign DynamoDB project",
+    "AWSService": "Amazon DynamoDB",
+    "Version": "3.0"
+  },
+  "DataModel": [
+    {
+      "TableName": "NewASA",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "item_type",
+          "AttributeType": "S"
+        },
+        "SortKey": {
+          "AttributeName": "id",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "gsi_1_pk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_1_sk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_2_pk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_2_sk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_3_pk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_3_sk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_4_pk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_4_sk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_5_pk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "gsi_5_sk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "lsi_1",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "lsi_2",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "lsi_3",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "lsi_4",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "lsi_5",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute1",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute2",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute3",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute4",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute5",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute6",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute7",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute8",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute9",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute10",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute11",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute12",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute13",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute14",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute15",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute16",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute17",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute18",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute19",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute20",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute21",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute22",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute23",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute24",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute25",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute26",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute27",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute28",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute29",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute30",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute31",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute32",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute33",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "attribute34",
+          "AttributeType": "S"
+        }
+      ],
+      "GlobalSecondaryIndexes": [
+        {
+          "IndexName": "GSI1",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "gsi_1_pk",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "gsi_1_sk",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        },
+        {
+          "IndexName": "GSI2",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "gsi_2_pk",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "gsi_2_sk",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        },
+        {
+          "IndexName": "GSI3",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "gsi_3_pk",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "gsi_3_sk",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        },
+        {
+          "IndexName": "GSI4",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "gsi_4_pk",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "gsi_4_sk",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        },
+        {
+          "IndexName": "GSI5",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "gsi_5_pk",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "gsi_5_sk",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        }
+      ],
+      "TableData": [
+        {
+          "item_type": {
+            "S": "contact"
+          },
+          "id": {
+            "S": "CON-00102"
+          },
+          "gsi_1_pk": {
+            "S": "CON-00102"
+          },
+          "lsi_1": {
+            "S": "Berlin"
+          },
+          "lsi_2": {
+            "S": "Kyritz"
+          },
+          "lsi_3": {
+            "S": "20.06.1991"
+          },
+          "attribute1": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute2": {
+            "S": "Dr."
+          },
+          "attribute3": {
+            "S": "ad"
+          },
+          "attribute4": {
+            "S": "Mr."
+          },
+          "attribute5": {
+            "S": "{\"Vorname\":\"Winnie\",\n  \"Nachname\": \"Kruger\"}"
+          },
+          "attribute6": {
+            "S": "likes to talk"
+          },
+          "attribute7": {
+            "S": "{\"Straße\":\"Elm Street\",\n  \"Hausnummer\":\"65\",\n  \"PLZ\":\"108301\",\n  \"Ort\": \"Berlin\"}"
+          },
+          "attribute8": {
+            "S": "{\"Straße\":\"Second Street\",\n  \"Hausnummer\":\"122\",\n  \"PLZ\":\"12437\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute9": {
+            "S": "20.06.1991"
+          },
+          "attribute10": {
+            "S": "germany@germany.com"
+          },
+          "attribute11": {
+            "S": "030 12345"
+          },
+          "attribute12": {
+            "S": "0049 176 22345678"
+          },
+          "attribute13": {
+            "S": "030 84653740"
+          },
+          "attribute14": {
+            "S": "Sales Manager"
+          },
+          "attribute15": {
+            "S": "male"
+          },
+          "attribute16": {
+            "S": "Golf"
+          },
+          "attribute17": {
+            "S": "left wing"
+          },
+          "attribute18": {
+            "S": "christ"
+          },
+          "attribute19": {
+            "S": "Berlin"
+          },
+          "attribute20": {
+            "S": "Kyritz"
+          }
+        },
+        {
+          "item_type": {
+            "S": "contact"
+          },
+          "id": {
+            "S": "CON-00103"
+          },
+          "gsi_1_pk": {
+            "S": "CON-00103"
+          },
+          "lsi_1": {
+            "S": "Frankfurt"
+          },
+          "lsi_2": {
+            "S": "Wiesbaden"
+          },
+          "lsi_3": {
+            "S": "23.07.1976"
+          },
+          "attribute1": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute2": {
+            "S": "Dr."
+          },
+          "attribute3": {
+            "S": "ad"
+          },
+          "attribute4": {
+            "S": "Ms."
+          },
+          "attribute5": {
+            "S": "{\"Vorname\":\"Stacey\",\n  \"Nachname\": \"Smith\"}"
+          },
+          "attribute6": {
+            "S": "loves japanese kitchen"
+          },
+          "attribute7": {
+            "S": "{\"Straße\":\"Hauptstraße\",\n  \"Hausnummer\":\"99\",\n  \"PLZ\":\"108301\",\n  \"Ort\": \"Frankfurt\"}"
+          },
+          "attribute8": {
+            "S": "{\"Straße\":\"Second Street\",\n  \"Hausnummer\":\"102\",\n  \"PLZ\":\"109887\",\n  \"Ort\": \"Wiesbaden\"}"
+          },
+          "attribute9": {
+            "S": "19.06.1981"
+          },
+          "attribute10": {
+            "S": "patrickreyes@example.org"
+          },
+          "attribute11": {
+            "S": "030 12345"
+          },
+          "attribute12": {
+            "S": "0049 176 22345678"
+          },
+          "attribute13": {
+            "S": "030 237455374"
+          },
+          "attribute14": {
+            "S": "CEO"
+          },
+          "attribute15": {
+            "S": "male"
+          },
+          "attribute16": {
+            "S": "Karate"
+          },
+          "attribute17": {
+            "S": "centrist"
+          },
+          "attribute18": {
+            "S": "moslem"
+          },
+          "attribute19": {
+            "S": "Frankfurt"
+          },
+          "attribute20": {
+            "S": "Wiesbaden"
+          }
+        },
+        {
+          "item_type": {
+            "S": "contact"
+          },
+          "id": {
+            "S": "CON-00104"
+          },
+          "gsi_1_pk": {
+            "S": "CON-00104"
+          },
+          "lsi_1": {
+            "S": "Kyritz"
+          },
+          "lsi_2": {
+            "S": "Kyritz"
+          },
+          "lsi_3": {
+            "S": "23.07.1976"
+          },
+          "attribute1": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute2": {
+            "S": "Dr."
+          },
+          "attribute3": {
+            "S": "ad"
+          },
+          "attribute4": {
+            "S": "Ms."
+          },
+          "attribute5": {
+            "S": "{\"Vorname\":\"Carlos\",\n  \"Nachname\": \"Ortega\"}"
+          },
+          "attribute6": {
+            "S": "loves Football"
+          },
+          "attribute7": {
+            "S": "{\"Straße\":\"Feldmann Straße\",\n  \"Hausnummer\":\"102\",\n  \"PLZ\":\"104501\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute8": {
+            "S": "{\"Straße\":\"Sesam Street\",\n  \"Hausnummer\":\"76\",\n  \"PLZ\":\"109887\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute9": {
+            "S": "19.06.1986"
+          },
+          "attribute10": {
+            "S": "carlos@example.org"
+          },
+          "attribute11": {
+            "S": "030 12345"
+          },
+          "attribute12": {
+            "S": "0049 176 22345678"
+          },
+          "attribute13": {
+            "S": "030 237455374"
+          },
+          "attribute14": {
+            "S": "CFO"
+          },
+          "attribute15": {
+            "S": "male"
+          },
+          "attribute16": {
+            "S": "Yu Gi Oh Card Game"
+          },
+          "attribute17": {
+            "S": "Dataist"
+          },
+          "attribute18": {
+            "S": "Jew"
+          },
+          "attribute19": {
+            "S": "Kyritz"
+          },
+          "attribute20": {
+            "S": "Kyritz"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer"
+          },
+          "id": {
+            "S": "CUS-00102"
+          },
+          "gsi_1_pk": {
+            "S": "CUS-00102"
+          },
+          "lsi_1": {
+            "S": "Winnie Kruger"
+          },
+          "attribute1": {
+            "S": "{\"Vorname\":\"Winnie\",\n  \"Nachname\": \"Kruger\"}"
+          },
+          "attribute2": {
+            "S": "ORG-090001"
+          },
+          "attribute3": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Dunker Straße\",\n  \"Hausnummer\":\"14\",\n  \"PLZ\":\"12437\",\n  \"Ort\": \"Berlin\"}"
+          },
+          "attribute5": {
+            "S": "loves Movies"
+          },
+          "attribute6": {
+            "S": "yes"
+          },
+          "attribute7": {
+            "S": "REP-9904756"
+          },
+          "attribute8": {
+            "S": "mediocre relationship"
+          },
+          "attribute9": {
+            "S": "CON-00001"
+          },
+          "attribute10": {
+            "S": "CON-00011"
+          },
+          "attribute11": {
+            "S": "CON-00111"
+          },
+          "attribute12": {
+            "S": "2"
+          },
+          "attribute13": {
+            "S": "Winnie Kruger"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer"
+          },
+          "id": {
+            "S": "CUS-00103"
+          },
+          "gsi_1_pk": {
+            "S": "CUS-00103"
+          },
+          "lsi_1": {
+            "S": "Sarah Bench"
+          },
+          "attribute1": {
+            "S": "{\"Vorname\":\"Sarah\",\n  \"Nachname\": \"Bench\"}"
+          },
+          "attribute2": {
+            "S": "ORG-090002"
+          },
+          "attribute3": {
+            "S": "www.xyz-555.com"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Feldmann Straße\",\n  \"Hausnummer\":\"67\",\n  \"PLZ\":\"124009\",\n  \"Ort\": \"Hamburg\"}"
+          },
+          "attribute5": {
+            "S": "Loves Bali"
+          },
+          "attribute6": {
+            "S": "no"
+          },
+          "attribute7": {
+            "S": "REP-9904757"
+          },
+          "attribute8": {
+            "S": "excelent relationship"
+          },
+          "attribute9": {
+            "S": "CON-00002"
+          },
+          "attribute10": {
+            "S": "CON-00012"
+          },
+          "attribute11": {
+            "S": "CON-00112"
+          },
+          "attribute12": {
+            "S": "5"
+          },
+          "attribute13": {
+            "S": "Sarah Bench"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer"
+          },
+          "id": {
+            "S": "CUS-00104"
+          },
+          "gsi_1_pk": {
+            "S": "CUS-00104"
+          },
+          "lsi_1": {
+            "S": "Clara Bernot"
+          },
+          "attribute1": {
+            "S": "{\"Vorname\":\"Clara\",\n  \"Nachname\": \"Bernot\"}"
+          },
+          "attribute3": {
+            "S": "www.xyz-555.com"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Delmer Straße\",\n  \"Hausnummer\":\"57\",\n  \"PLZ\":\"124009\",\n  \"Ort\": \"Malchin\"}"
+          },
+          "attribute5": {
+            "S": "Loves Cheesburger"
+          },
+          "attribute6": {
+            "S": "yes"
+          },
+          "attribute7": {
+            "S": "REP-9904757"
+          },
+          "attribute8": {
+            "S": "excelent relationship"
+          },
+          "attribute9": {
+            "S": "CON-00045"
+          },
+          "attribute10": {
+            "S": "CON-00223"
+          },
+          "attribute12": {
+            "S": "5"
+          },
+          "attribute13": {
+            "S": "Clara Bernot"
+          }
+        },
+        {
+          "item_type": {
+            "S": "representative"
+          },
+          "id": {
+            "S": "REP-00234"
+          },
+          "gsi_1_pk": {
+            "S": "REP-00234"
+          },
+          "lsi_1": {
+            "S": "Berlin"
+          },
+          "lsi_2": {
+            "S": "Berlin"
+          },
+          "attribute1": {
+            "S": "ORG-09001"
+          },
+          "attribute2": {
+            "S": "www.dge.de"
+          },
+          "attribute3": {
+            "S": "{\"Straße\":\"Hunker Straße\",\n  \"Hausnummer\":\"14\",\n  \"PLZ\":\"12445\",\n  \"Ort\": \"Berlin\"}"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Denner Straße\",\n  \"Hausnummer\":\"9\",\n  \"PLZ\":\"12445\",\n  \"Ort\": \"Berlin\"}"
+          },
+          "attribute5": {
+            "S": "CON-00001"
+          },
+          "attribute6": {
+            "S": "CON-00011"
+          },
+          "attribute7": {
+            "S": "CON-00111"
+          },
+          "attribute8": {
+            "S": "Berlin"
+          },
+          "attribute9": {
+            "S": "Berlin"
+          }
+        },
+        {
+          "item_type": {
+            "S": "representative"
+          },
+          "id": {
+            "S": "REP-00235"
+          },
+          "gsi_1_pk": {
+            "S": "REP-00235"
+          },
+          "lsi_1": {
+            "S": "Malchin"
+          },
+          "lsi_2": {
+            "S": "Malchin"
+          },
+          "attribute1": {
+            "S": "ORG-09002"
+          },
+          "attribute2": {
+            "S": "www.koskos.de"
+          },
+          "attribute3": {
+            "S": "{\"Straße\":\"Baselor Straße\",\n  \"Hausnummer\":\"34\",\n  \"PLZ\":\"10645\",\n  \"Ort\": \"Malchin\"}"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Schneider Straße\",\n  \"Hausnummer\":\"54\",\n  \"PLZ\":\"10655\",\n  \"Ort\": \"Malchin\"}"
+          },
+          "attribute5": {
+            "S": "CON-00002"
+          },
+          "attribute6": {
+            "S": "CON-00012"
+          },
+          "attribute7": {
+            "S": "CON-00112"
+          },
+          "attribute8": {
+            "S": "Malchin"
+          },
+          "attribute9": {
+            "S": "Malchin"
+          }
+        },
+        {
+          "item_type": {
+            "S": "representative"
+          },
+          "id": {
+            "S": "REP-00236"
+          },
+          "gsi_1_pk": {
+            "S": "REP-00236"
+          },
+          "lsi_1": {
+            "S": "Kyritz"
+          },
+          "lsi_2": {
+            "S": "Kyritz"
+          },
+          "attribute3": {
+            "S": "{\"Straße\":\"Zenker Straße\",\n  \"Hausnummer\":\"04\",\n  \"PLZ\":\"10645\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Scheider Straße\",\n  \"Hausnummer\":\"14\",\n  \"PLZ\":\"10655\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute5": {
+            "S": "CON-00003"
+          },
+          "attribute6": {
+            "S": "CON-00013"
+          },
+          "attribute8": {
+            "S": "Kyritz"
+          },
+          "attribute9": {
+            "S": "Kyritz"
+          }
+        },
+        {
+          "item_type": {
+            "S": "organisation"
+          },
+          "id": {
+            "S": "ORG-00102"
+          },
+          "gsi_1_pk": {
+            "S": "ORG-00102"
+          },
+          "lsi_1": {
+            "S": "Berlin"
+          },
+          "lsi_2": {
+            "S": "Kyritz"
+          },
+          "lsi_3": {
+            "S": "Hausverwaltung"
+          },
+          "attribute1": {
+            "S": "Laren Hausverwaltung GmbH"
+          },
+          "attribute2": {
+            "S": "HRB-66162B"
+          },
+          "attribute3": {
+            "S": "GmbH"
+          },
+          "attribute4": {
+            "S": "Hausverwaltung"
+          },
+          "attribute5": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute6": {
+            "S": "2005"
+          },
+          "attribute7": {
+            "S": "Deutschland"
+          },
+          "attribute8": {
+            "S": "3,5"
+          },
+          "attribute9": {
+            "S": "likes to talk"
+          },
+          "attribute10": {
+            "S": "{\"Straße\":\"Elm Street\",\n  \"Hausnummer\":\"65\",\n  \"PLZ\":\"108301\",\n  \"Ort\": \"Berlin\"}"
+          },
+          "attribute11": {
+            "S": "Checkbox"
+          },
+          "attribute12": {
+            "S": "{\"Straße\":\"Second Street\",\n  \"Hausnummer\":\"122\",\n  \"PLZ\":\"12437\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute13": {
+            "S": "Berlin"
+          },
+          "attribute14": {
+            "S": "Kyritz"
+          }
+        },
+        {
+          "item_type": {
+            "S": "organisation"
+          },
+          "id": {
+            "S": "ORG-00103"
+          },
+          "gsi_1_pk": {
+            "S": "ORG-00103"
+          },
+          "lsi_1": {
+            "S": "Frankfurt"
+          },
+          "lsi_2": {
+            "S": "Wiesbaden"
+          },
+          "lsi_3": {
+            "S": "Hausverwaltung"
+          },
+          "attribute1": {
+            "S": "WBG Wiitstock GmbH"
+          },
+          "attribute2": {
+            "S": "HRB-66162C"
+          },
+          "attribute3": {
+            "S": "GmbH"
+          },
+          "attribute4": {
+            "S": "Hausverwaltung"
+          },
+          "attribute5": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute6": {
+            "S": "1993"
+          },
+          "attribute7": {
+            "S": "Deutschland"
+          },
+          "attribute8": {
+            "S": "1,3"
+          },
+          "attribute9": {
+            "S": "likes to talk"
+          },
+          "attribute10": {
+            "S": "{\"Straße\":\"Hauptstraße\",\n  \"Hausnummer\":\"99\",\n  \"PLZ\":\"108301\",\n  \"Ort\": \"Frankfurt\"}"
+          },
+          "attribute11": {
+            "S": "Checkbox"
+          },
+          "attribute12": {
+            "S": "{\"Straße\":\"Second Street\",\n  \"Hausnummer\":\"102\",\n  \"PLZ\":\"109887\",\n  \"Ort\": \"Wiesbaden\"}"
+          },
+          "attribute13": {
+            "S": "Frankfurt"
+          },
+          "attribute14": {
+            "S": "Wiesbaden"
+          }
+        },
+        {
+          "item_type": {
+            "S": "organisation"
+          },
+          "id": {
+            "S": "ORG-00104"
+          },
+          "gsi_1_pk": {
+            "S": "ORG-00104"
+          },
+          "lsi_1": {
+            "S": "Berlin"
+          },
+          "lsi_2": {
+            "S": "Berlin"
+          },
+          "lsi_3": {
+            "S": "Hausverwaltung"
+          },
+          "attribute1": {
+            "S": "Haus Management GmbH"
+          },
+          "attribute2": {
+            "S": "HRB-77162C"
+          },
+          "attribute3": {
+            "S": "GmbH"
+          },
+          "attribute4": {
+            "S": "Hausverwaltung"
+          },
+          "attribute5": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute6": {
+            "S": "1980"
+          },
+          "attribute7": {
+            "S": "Deutschland"
+          },
+          "attribute8": {
+            "S": "2,5"
+          },
+          "attribute9": {
+            "S": "likes to talk"
+          },
+          "attribute10": {
+            "S": "{\"Straße\":\"Trost Straße\",\n  \"Hausnummer\":\"99\",\n  \"PLZ\":\"108301\",\n  \"Ort\": \"Berlin\"}"
+          },
+          "attribute11": {
+            "S": "Checkbox"
+          },
+          "attribute12": {
+            "S": "{\"Straße\":\"Second Street\",\n  \"Hausnummer\":\"102\",\n  \"PLZ\":\"109887\",\n  \"Ort\": \"Berlin\"}"
+          },
+          "attribute13": {
+            "S": "Berlin"
+          },
+          "attribute14": {
+            "S": "Berlin"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer_contract"
+          },
+          "id": {
+            "S": "ENC-000250"
+          },
+          "gsi_1_pk": {
+            "S": "ENC-000250"
+          },
+          "lsi_1": {
+            "S": "CUS-73665"
+          },
+          "lsi_2": {
+            "S": "BUI-304"
+          },
+          "lsi_3": {
+            "S": "Heat"
+          },
+          "lsi_4": {
+            "S": "REP#66576"
+          },
+          "lsi_5": {
+            "S": "2030-07-29T00:00:00.000Z"
+          },
+          "attribute1": {
+            "S": "BUI-304"
+          },
+          "attribute2": {
+            "S": "{\"Straße\":\"Dunker Straße\",\n  \"Hausnummer\":\"04\",\n  \"PLZ\":\"10645\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute3": {
+            "S": "{\"Vorname\":\"Kruger\",\n  \"Nachname\": \"Winnie\"}"
+          },
+          "attribute4": {
+            "S": "CUS-73665"
+          },
+          "attribute5": {
+            "S": "Torsten Schulter"
+          },
+          "attribute6": {
+            "S": "REP#66576"
+          },
+          "attribute7": {
+            "S": "{\"Vorname\":\"Kruger\",\n  \"Nachname\": \"Winnie\"}"
+          },
+          "attribute8": {
+            "S": "2007-06-04T00:00:00.000Z"
+          },
+          "attribute9": {
+            "S": "Heat"
+          },
+          "attribute10": {
+            "S": "Pacht"
+          },
+          "attribute11": {
+            "S": "2020-08-01T00:00:00.000Z"
+          },
+          "attribute12": {
+            "S": "2030-07-29T00:00:00.000Z"
+          },
+          "attribute13": {
+            "S": "Comment for this super wonderful contract #103"
+          },
+          "attribute14": {
+            "S": "PAF#AP7756"
+          },
+          "attribute15": {
+            "S": "AP = APo*(0,2 + 0,8*HEL/HELo)"
+          },
+          "attribute16": {
+            "S": "PAF#GP00045"
+          },
+          "attribute17": {
+            "S": "GP = GPo*(0,2 + 0,8*Index/Index)"
+          },
+          "attribute18": {
+            "S": "61"
+          },
+          "attribute19": {
+            "S": "annually"
+          },
+          "attribute20": {
+            "S": "EUR/MWh"
+          },
+          "attribute21": {
+            "S": "2"
+          },
+          "attribute22": {
+            "S": "quarterly"
+          },
+          "attribute23": {
+            "S": "EUR/kW"
+          },
+          "attribute24": {
+            "S": "123"
+          },
+          "attribute25": {
+            "S": "6"
+          },
+          "attribute26": {
+            "S": "2016-03-23T00:00:00.000Z"
+          },
+          "attribute27": {
+            "S": "no"
+          },
+          "attribute28": {
+            "S": "2018-06-10T00:00:00.000Z"
+          },
+          "attribute29": {
+            "S": "60"
+          },
+          "attribute30": {
+            "S": "60"
+          },
+          "attribute31": {
+            "S": "Comment for this super wonderful contract #103 term"
+          },
+          "attribute32": {
+            "S": "end of year"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer_contract"
+          },
+          "id": {
+            "S": "ENC-000251"
+          },
+          "gsi_1_pk": {
+            "S": "ENC-000251"
+          },
+          "lsi_1": {
+            "S": "CUS-73666"
+          },
+          "lsi_2": {
+            "S": "BUI-305"
+          },
+          "lsi_3": {
+            "S": "Heat"
+          },
+          "lsi_4": {
+            "S": "REP#66577"
+          },
+          "lsi_5": {
+            "S": "2029-07-29T00:00:00.000Z"
+          },
+          "attribute1": {
+            "S": "BUI-305"
+          },
+          "attribute2": {
+            "S": "{\"Straße\":\"Schlacht Straße\",\n  \"Hausnummer\":\"04\",\n  \"PLZ\":\"10645\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute3": {
+            "S": "{\"Vorname\":\"Steffani\",\n  \"Nachname\": \"Britz\"}"
+          },
+          "attribute4": {
+            "S": "CUS-73666"
+          },
+          "attribute5": {
+            "S": "Hausverwaltung GmbH"
+          },
+          "attribute6": {
+            "S": "REP#66577"
+          },
+          "attribute7": {
+            "S": "{\"Vorname\":\"Steffani\",\n  \"Nachname\": \"Britz\"}"
+          },
+          "attribute8": {
+            "S": "2008-06-04T00:00:00.000Z"
+          },
+          "attribute9": {
+            "S": "Heat"
+          },
+          "attribute10": {
+            "S": "Pacht"
+          },
+          "attribute11": {
+            "S": "2019-08-01T00:00:00.000Z"
+          },
+          "attribute12": {
+            "S": "2029-07-29T00:00:00.000Z"
+          },
+          "attribute13": {
+            "S": "Comment for this super wonderful contract #104"
+          },
+          "attribute14": {
+            "S": "PAF#AP7756"
+          },
+          "attribute15": {
+            "S": "AP = APo*(0,2 + 0,8*HEL/HELo)"
+          },
+          "attribute16": {
+            "S": "PAF#GP00045"
+          },
+          "attribute17": {
+            "S": "GP = GPo*(0,2 + 0,8*Index/Index)"
+          },
+          "attribute18": {
+            "S": "64"
+          },
+          "attribute19": {
+            "S": "annually"
+          },
+          "attribute20": {
+            "S": "EUR/MWh"
+          },
+          "attribute21": {
+            "S": "3"
+          },
+          "attribute22": {
+            "S": "quarterly"
+          },
+          "attribute23": {
+            "S": "EUR/kW"
+          },
+          "attribute24": {
+            "S": "110"
+          },
+          "attribute25": {
+            "S": "6"
+          },
+          "attribute26": {
+            "S": "2015-03-23T00:00:00.000Z"
+          },
+          "attribute27": {
+            "S": "no"
+          },
+          "attribute28": {
+            "S": "2017-06-10T00:00:00.000Z"
+          },
+          "attribute29": {
+            "S": "60"
+          },
+          "attribute30": {
+            "S": "60"
+          },
+          "attribute31": {
+            "S": "Comment for this super wonderful contract #103 term"
+          },
+          "attribute32": {
+            "S": "end of year"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer_contract"
+          },
+          "id": {
+            "S": "ENC-000252"
+          },
+          "gsi_1_pk": {
+            "S": "ENC-000252"
+          },
+          "lsi_1": {
+            "S": "CUS-73667"
+          },
+          "lsi_2": {
+            "S": "BUI-306"
+          },
+          "lsi_3": {
+            "S": "Heat"
+          },
+          "lsi_4": {
+            "S": "REP#66578"
+          },
+          "lsi_5": {
+            "S": "2029-07-29T00:00:00.000Z"
+          },
+          "attribute1": {
+            "S": "BUI-306"
+          },
+          "attribute2": {
+            "S": "{\"Straße\":\"Tems Straße\",\n  \"Hausnummer\":\"04\",\n  \"PLZ\":\"10645\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute3": {
+            "S": "{\"Vorname\":\"Fabian\",\n  \"Nachname\": \"Bertelson\"}"
+          },
+          "attribute4": {
+            "S": "CUS-73667"
+          },
+          "attribute5": {
+            "S": "LAREN GmbH"
+          },
+          "attribute6": {
+            "S": "REP#66578"
+          },
+          "attribute7": {
+            "S": "{\"Vorname\":\"Fabian\",\n  \"Nachname\": \"Bertelson\"}"
+          },
+          "attribute8": {
+            "S": "2008-06-04T00:00:00.000Z"
+          },
+          "attribute9": {
+            "S": "Heat"
+          },
+          "attribute10": {
+            "S": "Pacht"
+          },
+          "attribute11": {
+            "S": "2019-08-01T00:00:00.000Z"
+          },
+          "attribute12": {
+            "S": "2029-07-29T00:00:00.000Z"
+          },
+          "attribute13": {
+            "S": "Comment for this super wonderful contract #104"
+          },
+          "attribute14": {
+            "S": "PAF#AP7756"
+          },
+          "attribute15": {
+            "S": "AP = APo*(0,2 + 0,8*HEL/HELo)"
+          },
+          "attribute16": {
+            "S": "PAF#GP00045"
+          },
+          "attribute17": {
+            "S": "GP = GPo*(0,2 + 0,8*Index/Index)"
+          },
+          "attribute18": {
+            "S": "75"
+          },
+          "attribute19": {
+            "S": "annually"
+          },
+          "attribute20": {
+            "S": "EUR/MWh"
+          },
+          "attribute21": {
+            "S": "4"
+          },
+          "attribute22": {
+            "S": "quarterly"
+          },
+          "attribute23": {
+            "S": "EUR/kW"
+          },
+          "attribute24": {
+            "S": "99"
+          },
+          "attribute25": {
+            "S": "6"
+          },
+          "attribute26": {
+            "S": "2015-03-23T00:00:00.000Z"
+          },
+          "attribute27": {
+            "S": "no"
+          },
+          "attribute28": {
+            "S": "2019-06-10T00:00:00.000Z"
+          },
+          "attribute29": {
+            "S": "60"
+          },
+          "attribute30": {
+            "S": "60"
+          },
+          "attribute31": {
+            "S": "Comment for this super wonderful contract #103 term"
+          },
+          "attribute32": {
+            "S": "end of year"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer_invoice"
+          },
+          "id": {
+            "S": "INV-000234-01-24-03"
+          },
+          "gsi_1_pk": {
+            "S": "INV-000234-01-24-03"
+          },
+          "lsi_1": {
+            "S": "CUS-00021"
+          },
+          "lsi_2": {
+            "S": "ENC-000234"
+          },
+          "lsi_3": {
+            "S": "2023-05-17"
+          },
+          "lsi_4": {
+            "S": "2023"
+          },
+          "attribute1": {
+            "S": "CUS-00021"
+          },
+          "attribute2": {
+            "S": "ENC-000234"
+          },
+          "attribute3": {
+            "S": "Robert Komi"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Dunker Straße\",\n  \"Hausnummer\":\"04\",\n  \"PLZ\":\"10645\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute5": {
+            "S": "Jahresrechnung Wärme"
+          },
+          "attribute6": {
+            "S": "4.302,57€"
+          },
+          "attribute7": {
+            "S": "2023-05-17"
+          },
+          "attribute8": {
+            "S": "2023"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer_invoice"
+          },
+          "id": {
+            "S": "INV-000224-03-24-08"
+          },
+          "gsi_1_pk": {
+            "S": "INV-000224-03-24-08"
+          },
+          "lsi_1": {
+            "S": "CUS-00022"
+          },
+          "lsi_2": {
+            "S": "ENC-000235"
+          },
+          "lsi_3": {
+            "S": "2023-08-18"
+          },
+          "lsi_4": {
+            "S": "2023"
+          },
+          "attribute1": {
+            "S": "CUS-00022"
+          },
+          "attribute2": {
+            "S": "ENC-000235"
+          },
+          "attribute3": {
+            "S": "Steffan Beleitz"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Schlacht Straße\",\n  \"Hausnummer\":\"04\",\n  \"PLZ\":\"10645\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute5": {
+            "S": "Jahresrechnung Wärme"
+          },
+          "attribute6": {
+            "S": "7.334,45€"
+          },
+          "attribute7": {
+            "S": "2023-08-18"
+          },
+          "attribute8": {
+            "S": "2023"
+          }
+        },
+        {
+          "item_type": {
+            "S": "customer_invoice"
+          },
+          "id": {
+            "S": "INV-000224-03-24-09"
+          },
+          "gsi_1_pk": {
+            "S": "INV-000224-03-24-09"
+          },
+          "lsi_1": {
+            "S": "CUS-00023"
+          },
+          "lsi_2": {
+            "S": "ENC-000236"
+          },
+          "lsi_3": {
+            "S": "2024-08-18"
+          },
+          "lsi_4": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "CUS-00023"
+          },
+          "attribute2": {
+            "S": "ENC-000236"
+          },
+          "attribute3": {
+            "S": "Torsten Demut"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Tems Straße\",\n  \"Hausnummer\":\"04\",\n  \"PLZ\":\"10645\",\n  \"Ort\": \"Kyritz\"}"
+          },
+          "attribute5": {
+            "S": "Jahresrechnung Wärme"
+          },
+          "attribute6": {
+            "S": "8.634,45€"
+          },
+          "attribute7": {
+            "S": "2024-08-18"
+          },
+          "attribute8": {
+            "S": "2024"
+          }
+        },
+        {
+          "item_type": {
+            "S": "paf"
+          },
+          "id": {
+            "S": "PAF#AP-00023"
+          },
+          "gsi_1_pk": {
+            "S": "PAF#AP-00023"
+          },
+          "lsi_1": {
+            "S": "Arbeitspreis"
+          },
+          "lsi_2": {
+            "S": "Heizöl extra leicht"
+          },
+          "lsi_3": {
+            "S": "Heizöl extra leicht"
+          },
+          "lsi_4": {
+            "S": "Heizöl extra leicht"
+          },
+          "attribute1": {
+            "S": "Arbeitspreis"
+          },
+          "attribute2": {
+            "S": "AP"
+          },
+          "attribute3": {
+            "S": "AP = APo*(0,2 + 0,8*HEL/HELo)"
+          },
+          "attribute4": {
+            "S": "AP-Formel für Kyritz WBG"
+          },
+          "attribute5": {
+            "S": "Heizöl extra leicht"
+          },
+          "attribute6": {
+            "S": "IND#61261BV002#2002#MONAT12"
+          },
+          "attribute7": {
+            "S": "50%"
+          },
+          "attribute8": {
+            "S": "Heizöl extra leicht"
+          },
+          "attribute9": {
+            "S": "IND#61261BV002#2002#MONAT12"
+          },
+          "attribute10": {
+            "S": "30%"
+          },
+          "attribute11": {
+            "S": "Heizöl extra leicht"
+          },
+          "attribute12": {
+            "S": "IND#61261BV002#2002#MONAT12"
+          },
+          "attribute13": {
+            "S": "20%"
+          },
+          "attribute17": {
+            "S": "ENC-000345"
+          },
+          "attribute18": {
+            "S": "PAF#AP-00023"
+          },
+          "attribute19": {
+            "S": "ENC-000345"
+          }
+        },
+        {
+          "item_type": {
+            "S": "paf"
+          },
+          "id": {
+            "S": "PAF#GP-00334"
+          },
+          "gsi_1_pk": {
+            "S": "PAF#GP-00334"
+          },
+          "lsi_1": {
+            "S": "Grundpreis"
+          },
+          "lsi_2": {
+            "S": "Heizöl extra leicht"
+          },
+          "lsi_3": {
+            "S": "Heizöl extra leicht"
+          },
+          "lsi_4": {
+            "S": "Heizöl extra leicht"
+          },
+          "attribute1": {
+            "S": "Grundpreis"
+          },
+          "attribute2": {
+            "S": "GP"
+          },
+          "attribute3": {
+            "S": "GP_neu = GP_o * (0,2 + 0,4 * (Lohnindex_neu/ Lohnindex_o) + 0,4 * (Investitionsgüterindex_neu/ Investitionsgüterindex_o))"
+          },
+          "attribute4": {
+            "S": "GP-Formel für Kyritz WBG"
+          },
+          "attribute5": {
+            "S": "Heizöl extra leicht"
+          },
+          "attribute6": {
+            "S": "IND#61261BV002#2002#MONAT13"
+          },
+          "attribute7": {
+            "S": "50%"
+          },
+          "attribute8": {
+            "S": "Heizöl extra leicht"
+          },
+          "attribute9": {
+            "S": "IND#61261BV002#2002#MONAT13"
+          },
+          "attribute10": {
+            "S": "30%"
+          },
+          "attribute11": {
+            "S": "Heizöl extra leicht"
+          },
+          "attribute12": {
+            "S": "IND#61261BV002#2002#MONAT13"
+          },
+          "attribute13": {
+            "S": "20%"
+          },
+          "attribute17": {
+            "S": "ENC-000346"
+          },
+          "attribute18": {
+            "S": "PAF#GP-00334"
+          },
+          "attribute19": {
+            "S": "ENC-000346"
+          }
+        },
+        {
+          "item_type": {
+            "S": "paf"
+          },
+          "id": {
+            "S": "PAF#GP-00335"
+          },
+          "gsi_1_pk": {
+            "S": "PAF#GP-00335"
+          },
+          "lsi_1": {
+            "S": "Grundpreis"
+          },
+          "lsi_2": {
+            "S": "Fernwärmeindex"
+          },
+          "lsi_3": {
+            "S": "Lohnindex Energieversorgung"
+          },
+          "lsi_4": {
+            "S": "Instandhaltungsindex Heizungsanlagen"
+          },
+          "attribute1": {
+            "S": "Grundpreis"
+          },
+          "attribute2": {
+            "S": "GP"
+          },
+          "attribute3": {
+            "S": "GP_neu = GP_o * (0,2 + 0,4 * (Lohnindex_neu/ Lohnindex_o) + 0,4 * (Investitionsgüterindex_neu/ Investitionsgüterindex_o))"
+          },
+          "attribute4": {
+            "S": "GP-Formel für Kyritz WBG"
+          },
+          "attribute5": {
+            "S": "Fernwärmeindex"
+          },
+          "attribute6": {
+            "S": "IND#61241BM007#2002#MONAT02"
+          },
+          "attribute7": {
+            "S": "50%"
+          },
+          "attribute8": {
+            "S": "Lohnindex Energieversorgung"
+          },
+          "attribute9": {
+            "S": "IND#62221BV001#2002#Q1"
+          },
+          "attribute10": {
+            "S": "30%"
+          },
+          "attribute11": {
+            "S": "Instandhaltungsindex Heizungsanlagen"
+          },
+          "attribute12": {
+            "S": "IND#61261BV002#2002#Q1"
+          },
+          "attribute13": {
+            "S": "20%"
+          },
+          "attribute17": {
+            "S": "ENC-000346"
+          },
+          "attribute18": {
+            "S": "PAF#GP-00334"
+          },
+          "attribute19": {
+            "S": "ENC-000346"
+          }
+        },
+        {
+          "item_type": {
+            "S": "index"
+          },
+          "id": {
+            "S": "IND#61241BM007#2023#MONAT10"
+          },
+          "gsi_1_pk": {
+            "S": "IND#61241BM007#2023#MONAT10"
+          },
+          "lsi_1": {
+            "S": "61241BM007"
+          },
+          "lsi_2": {
+            "S": "Monthly"
+          },
+          "lsi_3": {
+            "S": "2021=100"
+          },
+          "attribute1": {
+            "S": "2023"
+          },
+          "attribute2": {
+            "S": "Monthly"
+          },
+          "attribute3": {
+            "S": "36,2"
+          },
+          "attribute4": {
+            "S": "61241BM007"
+          },
+          "attribute5": {
+            "S": "GP19N1"
+          },
+          "attribute8": {
+            "S": "GP19-161025030"
+          },
+          "attribute11": {
+            "S": "2021=100"
+          }
+        },
+        {
+          "item_type": {
+            "S": "index"
+          },
+          "id": {
+            "S": "IND#61261BV002#2022#Q2"
+          },
+          "gsi_1_pk": {
+            "S": "IND#61261BV002#2022#Q2"
+          },
+          "lsi_1": {
+            "S": "61261BV002"
+          },
+          "lsi_2": {
+            "S": "Quarter"
+          },
+          "lsi_3": {
+            "S": "2015=100"
+          },
+          "attribute1": {
+            "S": "2022"
+          },
+          "attribute2": {
+            "S": "Quarter"
+          },
+          "attribute3": {
+            "S": "36,2"
+          },
+          "attribute4": {
+            "S": "61261BV002"
+          },
+          "attribute5": {
+            "S": "STEMW1"
+          },
+          "attribute6": {
+            "S": "BAUIN2"
+          },
+          "attribute7": {
+            "S": "BAUIN1"
+          },
+          "attribute8": {
+            "S": "STEMW1"
+          },
+          "attribute9": {
+            "S": "BPI4"
+          },
+          "attribute10": {
+            "S": "BPNB525"
+          },
+          "attribute11": {
+            "S": "2015=100"
+          }
+        },
+        {
+          "item_type": {
+            "S": "index"
+          },
+          "id": {
+            "S": "IND#62221BV001#2021#Q1"
+          },
+          "gsi_1_pk": {
+            "S": "IND#62221BV001#2021#Q1"
+          },
+          "lsi_1": {
+            "S": "62221BV001"
+          },
+          "lsi_2": {
+            "S": "Quarter"
+          },
+          "lsi_3": {
+            "S": "2020=100"
+          },
+          "attribute1": {
+            "S": "2021"
+          },
+          "attribute2": {
+            "S": "Quarter"
+          },
+          "attribute3": {
+            "S": "36,2"
+          },
+          "attribute4": {
+            "S": "62221BV001"
+          },
+          "attribute5": {
+            "S": "WZ08C7"
+          },
+          "attribute8": {
+            "S": "WZ08-D"
+          },
+          "attribute11": {
+            "S": "2020=100"
+          }
+        },
+        {
+          "item_type": {
+            "S": "budget"
+          },
+          "id": {
+            "S": "BUD#000234#2024#jan"
+          },
+          "gsi_1_pk": {
+            "S": "BUD#000234#2024#jan"
+          },
+          "lsi_1": {
+            "S": "ENC-000234"
+          },
+          "lsi_2": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "ENC-000234"
+          },
+          "attribute2": {
+            "S": "January"
+          },
+          "attribute3": {
+            "S": "2024"
+          },
+          "attribute4": {
+            "S": "Heat"
+          },
+          "attribute5": {
+            "S": "300"
+          },
+          "attribute6": {
+            "S": "666"
+          }
+        },
+        {
+          "item_type": {
+            "S": "budget"
+          },
+          "id": {
+            "S": "BUD#000432#2024#jun"
+          },
+          "gsi_1_pk": {
+            "S": "BUD#000432#2024#jun"
+          },
+          "lsi_1": {
+            "S": "ENC-000432"
+          },
+          "lsi_2": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "ENC-000432"
+          },
+          "attribute2": {
+            "S": "June"
+          },
+          "attribute3": {
+            "S": "2024"
+          },
+          "attribute4": {
+            "S": "Heat"
+          },
+          "attribute5": {
+            "S": "750"
+          },
+          "attribute6": {
+            "S": "1300"
+          }
+        },
+        {
+          "item_type": {
+            "S": "budget"
+          },
+          "id": {
+            "S": "BUD#000433#2024#mar"
+          },
+          "gsi_1_pk": {
+            "S": "BUD#000433#2024#mar"
+          },
+          "lsi_1": {
+            "S": "ENC-000433"
+          },
+          "lsi_2": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "ENC-000433"
+          },
+          "attribute2": {
+            "S": "March"
+          },
+          "attribute3": {
+            "S": "2024"
+          },
+          "attribute4": {
+            "S": "Heat"
+          },
+          "attribute5": {
+            "S": "1010"
+          },
+          "attribute6": {
+            "S": "1700"
+          }
+        },
+        {
+          "item_type": {
+            "S": "fuel_price"
+          },
+          "id": {
+            "S": " ELP#Elt#2024#jan"
+          },
+          "gsi_1_pk": {
+            "S": " ELP#Elt#2024#jan"
+          },
+          "lsi_1": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "January"
+          },
+          "attribute2": {
+            "S": "2024"
+          },
+          "attribute3": {
+            "S": "Elt"
+          },
+          "attribute4": {
+            "S": "122"
+          },
+          "attribute5": {
+            "S": "EUR/Tonne"
+          }
+        },
+        {
+          "item_type": {
+            "S": "fuel_price"
+          },
+          "id": {
+            "S": " ELP#Gas#2024#jan"
+          },
+          "gsi_1_pk": {
+            "S": " ELP#Gas#2024#jan"
+          },
+          "lsi_1": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "January"
+          },
+          "attribute2": {
+            "S": "2024"
+          },
+          "attribute3": {
+            "S": "Gas"
+          },
+          "attribute4": {
+            "S": "122"
+          },
+          "attribute5": {
+            "S": "EUR/Tonne"
+          }
+        },
+        {
+          "item_type": {
+            "S": "fuel_price"
+          },
+          "id": {
+            "S": " ELP#Bio#2024#jan"
+          },
+          "gsi_1_pk": {
+            "S": " ELP#Bio#2024#jan"
+          },
+          "lsi_1": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "January"
+          },
+          "attribute2": {
+            "S": "2024"
+          },
+          "attribute3": {
+            "S": "Bio"
+          },
+          "attribute4": {
+            "S": "122"
+          },
+          "attribute5": {
+            "S": "EUR/Tonne"
+          }
+        },
+        {
+          "item_type": {
+            "S": "concession"
+          },
+          "id": {
+            "S": "CONC#Elt#T#01"
+          },
+          "gsi_1_pk": {
+            "S": "CONC#Elt#T#01"
+          },
+          "lsi_1": {
+            "S": "Tarifkunden"
+          },
+          "attribute1": {
+            "S": "Tarifkunden"
+          },
+          "attribute2": {
+            "S": "25.000"
+          },
+          "attribute3": {
+            "S": "ct/kWh"
+          },
+          "attribute4": {
+            "S": "Strom"
+          },
+          "attribute5": {
+            "S": "1,32"
+          },
+          "attribute6": {
+            "S": "ct/kWh"
+          }
+        },
+        {
+          "item_type": {
+            "S": "concession"
+          },
+          "id": {
+            "S": "CONC#Gas#S#01"
+          },
+          "gsi_1_pk": {
+            "S": "CONC#Gas#S#01"
+          },
+          "lsi_1": {
+            "S": "Sondertarif"
+          },
+          "attribute1": {
+            "S": "Sondertarif"
+          },
+          "attribute2": {
+            "S": "5.000.000"
+          },
+          "attribute3": {
+            "S": "ct/kWh"
+          },
+          "attribute4": {
+            "S": "Gas"
+          },
+          "attribute5": {
+            "S": "0,03"
+          },
+          "attribute6": {
+            "S": "ct/kWh"
+          }
+        },
+        {
+          "item_type": {
+            "S": "concession"
+          },
+          "id": {
+            "S": "CONC#Gas#S#02"
+          },
+          "gsi_1_pk": {
+            "S": "CONC#Gas#S#02"
+          },
+          "lsi_1": {
+            "S": "Sondertarif"
+          },
+          "attribute1": {
+            "S": "Sondertarif"
+          },
+          "attribute2": {
+            "S": "10.000.000"
+          },
+          "attribute3": {
+            "S": "ct/kWh"
+          },
+          "attribute4": {
+            "S": "Gas"
+          },
+          "attribute5": {
+            "S": "0,02"
+          },
+          "attribute6": {
+            "S": "ct/kWh"
+          }
+        },
+        {
+          "item_type": {
+            "S": "co2price"
+          },
+          "id": {
+            "S": "CO2#2020"
+          },
+          "gsi_1_pk": {
+            "S": "CO2#2020"
+          },
+          "attribute1": {
+            "S": "19"
+          },
+          "attribute2": {
+            "S": "EUR/Tonne"
+          }
+        },
+        {
+          "item_type": {
+            "S": "co2price"
+          },
+          "id": {
+            "S": "CO2#2021"
+          },
+          "gsi_1_pk": {
+            "S": "CO2#2021"
+          },
+          "attribute1": {
+            "S": "20"
+          },
+          "attribute2": {
+            "S": "EUR/Tonne"
+          }
+        },
+        {
+          "item_type": {
+            "S": "co2price"
+          },
+          "id": {
+            "S": "CO2#2022"
+          },
+          "gsi_1_pk": {
+            "S": "CO2#2022"
+          },
+          "attribute1": {
+            "S": "22"
+          },
+          "attribute2": {
+            "S": "EUR/Tonne"
+          }
+        },
+        {
+          "item_type": {
+            "S": "co2price"
+          },
+          "id": {
+            "S": "CO2#2023"
+          },
+          "gsi_1_pk": {
+            "S": "CO2#2023"
+          },
+          "attribute1": {
+            "S": "25"
+          },
+          "attribute2": {
+            "S": "EUR/Tonne"
+          }
+        },
+        {
+          "item_type": {
+            "S": "co2price"
+          },
+          "id": {
+            "S": "CO2#2024"
+          },
+          "gsi_1_pk": {
+            "S": "CO2#2024"
+          },
+          "attribute1": {
+            "S": "27"
+          },
+          "attribute2": {
+            "S": "EUR/Tonne"
+          }
+        },
+        {
+          "item_type": {
+            "S": "nne"
+          },
+          "id": {
+            "S": "NNE#zone1#2024#rlm"
+          },
+          "gsi_1_pk": {
+            "S": "NNE#zone1#2024#rlm"
+          },
+          "lsi_1": {
+            "S": "Gas"
+          },
+          "lsi_2": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "Gas"
+          },
+          "attribute2": {
+            "S": "2024"
+          },
+          "attribute3": {
+            "S": "RLM"
+          },
+          "attribute4": {
+            "S": "NBB"
+          },
+          "attribute5": {
+            "S": "Zone_1"
+          },
+          "attribute6": {
+            "S": "kWh"
+          },
+          "attribute7": {
+            "S": "1"
+          },
+          "attribute8": {
+            "S": "2.000.000"
+          },
+          "attribute9": {
+            "S": "-"
+          },
+          "attribute10": {
+            "S": "0,427"
+          },
+          "attribute11": {
+            "S": "ct/kWh"
+          },
+          "attribute12": {
+            "S": "-"
+          },
+          "attribute13": {
+            "S": "EUR/Jahr"
+          }
+        },
+        {
+          "item_type": {
+            "S": "nne"
+          },
+          "id": {
+            "S": "NNE#zone2#2023#rlm"
+          },
+          "gsi_1_pk": {
+            "S": "NNE#zone2#2023#rlm"
+          },
+          "lsi_1": {
+            "S": "Gas"
+          },
+          "lsi_2": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "Gas"
+          },
+          "attribute2": {
+            "S": "2024"
+          },
+          "attribute3": {
+            "S": "RLM"
+          },
+          "attribute4": {
+            "S": "EDIS"
+          },
+          "attribute5": {
+            "S": "Zone_2"
+          },
+          "attribute6": {
+            "S": "kWh"
+          },
+          "attribute7": {
+            "S": "1"
+          },
+          "attribute8": {
+            "S": "10.000.000"
+          },
+          "attribute9": {
+            "S": "-"
+          },
+          "attribute10": {
+            "S": "0,327"
+          },
+          "attribute11": {
+            "S": "ct/kWh"
+          },
+          "attribute12": {
+            "S": "-"
+          },
+          "attribute13": {
+            "S": "EUR/Jahr"
+          }
+        },
+        {
+          "item_type": {
+            "S": "nne"
+          },
+          "id": {
+            "S": "NNE#zone3#2023#slp"
+          },
+          "gsi_1_pk": {
+            "S": "NNE#zone3#2023#slp"
+          },
+          "lsi_1": {
+            "S": "Gas"
+          },
+          "lsi_2": {
+            "S": "2024"
+          },
+          "attribute1": {
+            "S": "Gas"
+          },
+          "attribute2": {
+            "S": "2024"
+          },
+          "attribute3": {
+            "S": "RLM"
+          },
+          "attribute4": {
+            "S": "NBB"
+          },
+          "attribute5": {
+            "S": "Zone_3"
+          },
+          "attribute6": {
+            "S": "kWh"
+          },
+          "attribute7": {
+            "S": "1"
+          },
+          "attribute8": {
+            "S": "50.000.000"
+          },
+          "attribute9": {
+            "S": "-"
+          },
+          "attribute10": {
+            "S": "0,227"
+          },
+          "attribute11": {
+            "S": "ct/kWh"
+          },
+          "attribute12": {
+            "S": "-"
+          },
+          "attribute13": {
+            "S": "EUR/Jahr"
+          }
+        },
+        {
+          "item_type": {
+            "S": "building"
+          },
+          "id": {
+            "S": "BUI-55509"
+          },
+          "gsi_1_pk": {
+            "S": "BUI-55509"
+          },
+          "lsi_1": {
+            "S": "CUS-00495"
+          },
+          "lsi_2": {
+            "S": "ENC-84635"
+          },
+          "lsi_3": {
+            "S": "Wiesbaden"
+          },
+          "lsi_4": {
+            "S": "industry building"
+          },
+          "lsi_5": {
+            "S": "58"
+          },
+          "attribute1": {
+            "S": "Siemensvilla"
+          },
+          "attribute2": {
+            "S": "CUS-00495"
+          },
+          "attribute3": {
+            "S": "ENC-84635"
+          },
+          "attribute4": {
+            "S": "industry building"
+          },
+          "attribute5": {
+            "S": "1965"
+          },
+          "attribute6": {
+            "S": "1566"
+          },
+          "attribute7": {
+            "S": "58"
+          },
+          "attribute8": {
+            "S": "1"
+          },
+          "attribute9": {
+            "S": "16"
+          },
+          "attribute10": {
+            "S": "{\"Straße\":\"Second Street\",\n  \"Hausnummer\":\"102\",\n  \"PLZ\":\"109887\",\n  \"Ort\": \"Wiesbaden\"}"
+          },
+          "attribute11": {
+            "S": "Wiesbaden"
+          },
+          "attribute12": {
+            "S": "Some beautiful building #304"
+          }
+        },
+        {
+          "item_type": {
+            "S": "building"
+          },
+          "id": {
+            "S": "BUI-55510"
+          },
+          "gsi_1_pk": {
+            "S": "BUI-55510"
+          },
+          "lsi_1": {
+            "S": "CUS-00496"
+          },
+          "lsi_2": {
+            "S": "ENC-84636"
+          },
+          "lsi_3": {
+            "S": "Wiesbaden"
+          },
+          "lsi_4": {
+            "S": "industry building"
+          },
+          "lsi_5": {
+            "S": "23"
+          },
+          "attribute2": {
+            "S": "CUS-00496"
+          },
+          "attribute3": {
+            "S": "ENC-84636"
+          },
+          "attribute4": {
+            "S": "industry building"
+          },
+          "attribute5": {
+            "S": "1999"
+          },
+          "attribute6": {
+            "S": "800"
+          },
+          "attribute7": {
+            "S": "23"
+          },
+          "attribute8": {
+            "S": "2"
+          },
+          "attribute9": {
+            "S": "12"
+          },
+          "attribute10": {
+            "S": "{\"Straße\":\"Second Street\",\n  \"Hausnummer\":\"102\",\n  \"PLZ\":\"109887\",\n  \"Ort\": \"Wiesbaden\"}"
+          },
+          "attribute11": {
+            "S": "Wiesbaden"
+          },
+          "attribute12": {
+            "S": "Some beautiful building #304"
+          }
+        },
+        {
+          "item_type": {
+            "S": "building"
+          },
+          "id": {
+            "S": "BUI-55511"
+          },
+          "gsi_1_pk": {
+            "S": "BUI-55511"
+          },
+          "lsi_1": {
+            "S": "CUS-00497"
+          },
+          "lsi_2": {
+            "S": "ENC-84637"
+          },
+          "lsi_3": {
+            "S": "Malchin"
+          },
+          "lsi_4": {
+            "S": "industry building"
+          },
+          "lsi_5": {
+            "S": "19"
+          },
+          "attribute2": {
+            "S": "CUS-00497"
+          },
+          "attribute3": {
+            "S": "ENC-84637"
+          },
+          "attribute4": {
+            "S": "industry building"
+          },
+          "attribute5": {
+            "S": "2003"
+          },
+          "attribute6": {
+            "S": "1500"
+          },
+          "attribute7": {
+            "S": "19"
+          },
+          "attribute8": {
+            "S": "1"
+          },
+          "attribute9": {
+            "S": "9"
+          },
+          "attribute10": {
+            "S": "{\"Straße\":\"Kleber Street\",\n  \"Hausnummer\":\"102\",\n  \"PLZ\":\"109887\",\n  \"Ort\": \"Malchin\"}"
+          },
+          "attribute11": {
+            "S": "Malchin"
+          },
+          "attribute12": {
+            "S": "Some beautiful building #304"
+          }
+        },
+        {
+          "item_type": {
+            "S": "entrance"
+          },
+          "id": {
+            "S": "ENT-00023"
+          },
+          "gsi_1_pk": {
+            "S": "ENT-00023"
+          },
+          "lsi_1": {
+            "S": "BUI-00304"
+          },
+          "attribute1": {
+            "S": "BUI-00304"
+          },
+          "attribute2": {
+            "S": "\"{\"\"Straße\"\":\"\"Feldmann Straße\"\",\n \"\"Hausnummer\"\":\"\"67\"\",\n \"\"PLZ\"\":\"\"124009\"\",\n \"\"Ort\"\": \"\"Hamburg\"\"}\""
+          },
+          "attribute3": {
+            "S": "Infos zum Eingang"
+          }
+        },
+        {
+          "item_type": {
+            "S": "entrance"
+          },
+          "id": {
+            "S": "ENT-00024"
+          },
+          "gsi_1_pk": {
+            "S": "ENT-00024"
+          },
+          "lsi_1": {
+            "S": "BUI-55510"
+          },
+          "attribute1": {
+            "S": "BUI-55510"
+          },
+          "attribute2": {
+            "S": "\"{\"\"Straße\"\":\"\"Dormann Straße\"\",\n \"\"Hausnummer\"\":\"\"67\"\",\n \"\"PLZ\"\":\"\"124009\"\",\n \"\"Ort\"\": \"\"Berlin\"\"}\""
+          },
+          "attribute3": {
+            "S": "Infos zum Eingang"
+          }
+        },
+        {
+          "item_type": {
+            "S": "entrance"
+          },
+          "id": {
+            "S": "ENT-00025"
+          },
+          "gsi_1_pk": {
+            "S": "ENT-00025"
+          },
+          "lsi_1": {
+            "S": "BUI-55511"
+          },
+          "attribute1": {
+            "S": "BUI-55511"
+          },
+          "attribute2": {
+            "S": "\"{\"\"Straße\"\":\"\"Kluster Straße\"\",\n \"\"Hausnummer\"\":\"\"55\"\",\n \"\"PLZ\"\":\"\"10119\"\",\n \"\"Ort\"\": \"\"Hamburg\"\"}\""
+          },
+          "attribute3": {
+            "S": "Infos zum Eingang"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meterpoint"
+          },
+          "id": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001"
+          },
+          "gsi_1_pk": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001"
+          },
+          "lsi_1": {
+            "S": "Potsdam"
+          },
+          "lsi_2": {
+            "S": "G02"
+          },
+          "lsi_3": {
+            "S": "P-00002"
+          },
+          "lsi_4": {
+            "S": "BUI-00001"
+          },
+          "attribute1": {
+            "S": "BUI-00001"
+          },
+          "attribute2": {
+            "S": "P-00002"
+          },
+          "attribute3": {
+            "S": "50060880710"
+          },
+          "attribute4": {
+            "S": "\"{\"\"Straße\"\":\"\"Hunker Straße\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Potsdam\"\"}\""
+          },
+          "attribute5": {
+            "S": "Potsdam"
+          },
+          "attribute6": {
+            "S": "Gas"
+          },
+          "attribute7": {
+            "S": "G02"
+          },
+          "attribute8": {
+            "S": "direct_counting"
+          },
+          "attribute9": {
+            "S": "P-00002-01-MG-001"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meterpoint"
+          },
+          "id": {
+            "S": "MPID#P-00345-01-MG-001#BUI-00002"
+          },
+          "gsi_1_pk": {
+            "S": "MPID#P-00345-01-MG-001#BUI-00002"
+          },
+          "lsi_1": {
+            "S": "Berlin"
+          },
+          "lsi_2": {
+            "S": "W01"
+          },
+          "lsi_3": {
+            "S": "P-00003"
+          },
+          "lsi_4": {
+            "S": "BUI-00002"
+          },
+          "attribute1": {
+            "S": "BUI-00002"
+          },
+          "attribute2": {
+            "S": "P-00003"
+          },
+          "attribute3": {
+            "S": "50060880710"
+          },
+          "attribute4": {
+            "S": "\"{\"\"Straße\"\":\"\"Kurfürstendamm\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Berlin\"\"}\""
+          },
+          "attribute5": {
+            "S": "Berlin"
+          },
+          "attribute6": {
+            "S": "Heat"
+          },
+          "attribute7": {
+            "S": "W01"
+          },
+          "attribute8": {
+            "S": "direct_counting"
+          },
+          "attribute9": {
+            "S": "P-00345-01-MG-001"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meterpoint"
+          },
+          "id": {
+            "S": "MPID#P-00223-01-MG-001#BUI-00003"
+          },
+          "gsi_1_pk": {
+            "S": "MPID#P-00223-01-MG-001#BUI-00003"
+          },
+          "lsi_1": {
+            "S": "Kyritz"
+          },
+          "lsi_2": {
+            "S": "W01"
+          },
+          "lsi_3": {
+            "S": "P-00004"
+          },
+          "lsi_4": {
+            "S": "BUI-00003"
+          },
+          "attribute1": {
+            "S": "BUI-00003"
+          },
+          "attribute2": {
+            "S": "P-00004"
+          },
+          "attribute3": {
+            "S": "50060880710"
+          },
+          "attribute4": {
+            "S": "\"{\"\"Straße\"\":\"\"Semmlerweg\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Kyritz\"\"}\""
+          },
+          "attribute5": {
+            "S": "Kyritz"
+          },
+          "attribute6": {
+            "S": "Heat"
+          },
+          "attribute7": {
+            "S": "W01"
+          },
+          "attribute8": {
+            "S": "direct_counting"
+          },
+          "attribute9": {
+            "S": "P-00223-01-MG-001"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meter"
+          },
+          "id": {
+            "S": "M#G000140#2026#MWh"
+          },
+          "gsi_1_pk": {
+            "S": "M#G000140#2026#MWh"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001"
+          },
+          "lsi_2": {
+            "S": "W01"
+          },
+          "lsi_3": {
+            "S": "Potsdam"
+          },
+          "lsi_4": {
+            "S": "BUI-00001"
+          },
+          "lsi_5": {
+            "S": "Ja"
+          },
+          "attribute1": {
+            "S": "MPID#P-00002-01-MG-001#BUI-00001"
+          },
+          "attribute2": {
+            "S": "POD-00002-01"
+          },
+          "attribute3": {
+            "S": "BUI-00001"
+          },
+          "attribute4": {
+            "S": "\"{\"\"Straße\"\":\"\"Hunker Straße\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Potsdam\"\"}\""
+          },
+          "attribute5": {
+            "S": "Potsdam"
+          },
+          "attribute6": {
+            "S": "Stromunterzähler vorhanden"
+          },
+          "attribute7": {
+            "S": "Heizraum"
+          },
+          "attribute8": {
+            "S": "Heat"
+          },
+          "attribute9": {
+            "S": "W01"
+          },
+          "attribute10": {
+            "S": "Gesamtwärmelieferung"
+          },
+          "attribute11": {
+            "S": "vom Lieferanten"
+          },
+          "attribute12": {
+            "S": "digital"
+          },
+          "attribute13": {
+            "S": "10041641"
+          },
+          "attribute14": {
+            "S": "3102531"
+          },
+          "attribute15": {
+            "S": "OK"
+          },
+          "attribute16": {
+            "S": "01.08.2000"
+          },
+          "attribute17": {
+            "S": "Quantity meter"
+          },
+          "attribute18": {
+            "S": "Kamstrup"
+          },
+          "attribute19": {
+            "S": "Multical 402"
+          },
+          "attribute20": {
+            "S": "ultrasonic"
+          },
+          "attribute21": {
+            "S": "5"
+          },
+          "attribute22": {
+            "S": "2026"
+          },
+          "attribute23": {
+            "S": "30"
+          },
+          "attribute24": {
+            "S": "MWh"
+          },
+          "attribute25": {
+            "S": "Ja"
+          },
+          "attribute26": {
+            "S": "4"
+          },
+          "attribute27": {
+            "S": "M-Bus"
+          },
+          "attribute28": {
+            "S": "Gewinde"
+          },
+          "attribute29": {
+            "S": "DN50"
+          },
+          "attribute30": {
+            "S": "6"
+          },
+          "attribute31": {
+            "S": "5,4"
+          },
+          "attribute32": {
+            "S": "28"
+          },
+          "attribute33": {
+            "S": "SLP"
+          },
+          "attribute34": {
+            "S": "Nice Comment"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meter"
+          },
+          "id": {
+            "S": "M#W00023#2026#MWh"
+          },
+          "gsi_1_pk": {
+            "S": "M#W00023#2026#MWh"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00345-01-MG-001#BUI-00002"
+          },
+          "lsi_2": {
+            "S": "K01"
+          },
+          "lsi_3": {
+            "S": "Kyritz"
+          },
+          "lsi_4": {
+            "S": "BUI-00002"
+          },
+          "lsi_5": {
+            "S": "Nein"
+          },
+          "attribute1": {
+            "S": "MPID#P-00345-01-MG-001#BUI-00002"
+          },
+          "attribute2": {
+            "S": "POD-00002-02"
+          },
+          "attribute3": {
+            "S": "BUI-00002"
+          },
+          "attribute4": {
+            "S": "\"{\"\"Straße\"\":\"\"Hunker Straße\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Kyritz\"\"}\""
+          },
+          "attribute5": {
+            "S": "Kyritz"
+          },
+          "attribute6": {
+            "S": "Stromunterzähler vorhanden"
+          },
+          "attribute7": {
+            "S": "Techn. Betriebsraun"
+          },
+          "attribute8": {
+            "S": "Cold_Water"
+          },
+          "attribute9": {
+            "S": "K01"
+          },
+          "attribute10": {
+            "S": "Gesamtwärmelieferung"
+          },
+          "attribute11": {
+            "S": "vom Lieferanten"
+          },
+          "attribute12": {
+            "S": "digital"
+          },
+          "attribute13": {
+            "S": "7E9567565"
+          },
+          "attribute14": {
+            "S": "3102531"
+          },
+          "attribute15": {
+            "S": "OK"
+          },
+          "attribute16": {
+            "S": "02.08.2000"
+          },
+          "attribute17": {
+            "S": "Quantity meter"
+          },
+          "attribute18": {
+            "S": "Eltako"
+          },
+          "attribute19": {
+            "S": "C11H"
+          },
+          "attribute20": {
+            "S": "Balgenzähler"
+          },
+          "attribute21": {
+            "S": "1,5"
+          },
+          "attribute22": {
+            "S": "2024"
+          },
+          "attribute23": {
+            "S": "20"
+          },
+          "attribute24": {
+            "S": "kWh"
+          },
+          "attribute25": {
+            "S": "Nein"
+          },
+          "attribute26": {
+            "S": "5"
+          },
+          "attribute27": {
+            "S": "nein"
+          },
+          "attribute28": {
+            "S": "Flansch"
+          },
+          "attribute29": {
+            "S": "DN100"
+          },
+          "attribute30": {
+            "S": "7"
+          },
+          "attribute31": {
+            "S": "6,3"
+          },
+          "attribute32": {
+            "S": "24"
+          },
+          "attribute33": {
+            "S": "RLM"
+          },
+          "attribute34": {
+            "S": "Good Comment"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meter"
+          },
+          "id": {
+            "S": "M#W00345#2026#MWh"
+          },
+          "gsi_1_pk": {
+            "S": "M#W00345#2026#MWh"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00223-01-MG-001#BUI-00003"
+          },
+          "lsi_2": {
+            "S": "G01"
+          },
+          "lsi_3": {
+            "S": "Berlin"
+          },
+          "lsi_4": {
+            "S": "BUI-00003"
+          },
+          "lsi_5": {
+            "S": "Ja"
+          },
+          "attribute1": {
+            "S": "MPID#P-00223-01-MG-001#BUI-00003"
+          },
+          "attribute2": {
+            "S": "POD-00002-03"
+          },
+          "attribute3": {
+            "S": "BUI-00003"
+          },
+          "attribute4": {
+            "S": "\"{\"\"Straße\"\":\"\"Hunker Straße\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Berlin\"\"}\""
+          },
+          "attribute5": {
+            "S": "Berlin"
+          },
+          "attribute6": {
+            "S": "Stromunterzähler vorhanden"
+          },
+          "attribute7": {
+            "S": "Zählerraum"
+          },
+          "attribute8": {
+            "S": "Gas"
+          },
+          "attribute9": {
+            "S": "G01"
+          },
+          "attribute10": {
+            "S": "Gesamtwärmelieferung"
+          },
+          "attribute11": {
+            "S": "vom Lieferanten"
+          },
+          "attribute12": {
+            "S": "analog"
+          },
+          "attribute13": {
+            "S": "947364546"
+          },
+          "attribute14": {
+            "S": "3102531"
+          },
+          "attribute15": {
+            "S": "OK"
+          },
+          "attribute16": {
+            "S": "03.08.2000"
+          },
+          "attribute17": {
+            "S": "Quantity meter"
+          },
+          "attribute18": {
+            "S": "Elster"
+          },
+          "attribute19": {
+            "S": "7CA54 61"
+          },
+          "attribute20": {
+            "S": "Mechanisch"
+          },
+          "attribute21": {
+            "S": "1,5"
+          },
+          "attribute22": {
+            "S": "2024"
+          },
+          "attribute23": {
+            "S": "25"
+          },
+          "attribute24": {
+            "S": "m³"
+          },
+          "attribute25": {
+            "S": "Ja"
+          },
+          "attribute26": {
+            "S": "6"
+          },
+          "attribute27": {
+            "S": "Funk/M-Bus"
+          },
+          "attribute28": {
+            "S": "Gewinde"
+          },
+          "attribute29": {
+            "S": "DN40"
+          },
+          "attribute30": {
+            "S": "8"
+          },
+          "attribute31": {
+            "S": "4,6"
+          },
+          "attribute32": {
+            "S": "21"
+          },
+          "attribute33": {
+            "S": "SLP"
+          },
+          "attribute34": {
+            "S": "Bad Comment"
+          }
+        },
+        {
+          "item_type": {
+            "S": "reading"
+          },
+          "id": {
+            "S": "READ#G000127#2021#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "READ#G000127#2021#Jan"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00001-01-MG-002#G02"
+          },
+          "lsi_2": {
+            "S": "Januar"
+          },
+          "lsi_3": {
+            "S": "ENC-000123"
+          },
+          "attribute1": {
+            "S": "MPID#P-00001-01-MG-002#G02"
+          },
+          "attribute2": {
+            "S": "BUI-00001"
+          },
+          "attribute3": {
+            "S": "Gas"
+          },
+          "attribute4": {
+            "S": "Januar"
+          },
+          "attribute5": {
+            "S": "2021"
+          },
+          "attribute6": {
+            "S": "10041641"
+          },
+          "attribute7": {
+            "S": "422.098,00"
+          },
+          "attribute8": {
+            "S": "m³"
+          },
+          "attribute9": {
+            "S": "2021-01-24 12:00:00"
+          },
+          "attribute10": {
+            "S": "Sauter"
+          },
+          "attribute11": {
+            "S": "G000140"
+          },
+          "attribute12": {
+            "S": "ENC-000123"
+          },
+          "attribute13": {
+            "S": "Ja"
+          }
+        },
+        {
+          "item_type": {
+            "S": "reading"
+          },
+          "id": {
+            "S": "READ#W000774#2022#Apr"
+          },
+          "gsi_1_pk": {
+            "S": "READ#W000774#2022#Apr"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00345-01-MG-001#BUI-00002"
+          },
+          "lsi_2": {
+            "S": "April"
+          },
+          "lsi_3": {
+            "S": "ENC-000124"
+          },
+          "attribute1": {
+            "S": "MPID#P-00345-01-MG-001#BUI-00002"
+          },
+          "attribute2": {
+            "S": "BUI-00002"
+          },
+          "attribute3": {
+            "S": "Heat"
+          },
+          "attribute4": {
+            "S": "April"
+          },
+          "attribute5": {
+            "S": "2022"
+          },
+          "attribute6": {
+            "S": "7E9567565"
+          },
+          "attribute7": {
+            "S": "123,34"
+          },
+          "attribute8": {
+            "S": "kWh"
+          },
+          "attribute9": {
+            "S": "2022-04-25 12:00:00"
+          },
+          "attribute10": {
+            "S": "Strohtmann"
+          },
+          "attribute11": {
+            "S": "W000774"
+          },
+          "attribute12": {
+            "S": "ENC-000124"
+          },
+          "attribute13": {
+            "S": "Nein"
+          }
+        },
+        {
+          "item_type": {
+            "S": "reading"
+          },
+          "id": {
+            "S": "READ#W000333#2023#Oct"
+          },
+          "gsi_1_pk": {
+            "S": "READ#W000333#2023#Oct"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00223-01-MG-001#BUI-00003"
+          },
+          "lsi_2": {
+            "S": "October"
+          },
+          "lsi_3": {
+            "S": "ENC-000125"
+          },
+          "attribute1": {
+            "S": "MPID#P-00223-01-MG-001#BUI-00003"
+          },
+          "attribute2": {
+            "S": "BUI-00003"
+          },
+          "attribute3": {
+            "S": "Heat"
+          },
+          "attribute4": {
+            "S": "October"
+          },
+          "attribute5": {
+            "S": "2023"
+          },
+          "attribute6": {
+            "S": "947364546"
+          },
+          "attribute7": {
+            "S": "3342,34"
+          },
+          "attribute8": {
+            "S": "MWh"
+          },
+          "attribute9": {
+            "S": "2023-10-26 12:00:00"
+          },
+          "attribute10": {
+            "S": "Eluh"
+          },
+          "attribute11": {
+            "S": "W000333"
+          },
+          "attribute12": {
+            "S": "ENC-000125"
+          },
+          "attribute13": {
+            "S": "Nein"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meterintervention"
+          },
+          "id": {
+            "S": "MEINT#2022#Jan#installation"
+          },
+          "gsi_1_pk": {
+            "S": "MEINT#2022#Jan#installation"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00001-01-MG-002"
+          },
+          "lsi_2": {
+            "S": "meter_replacement"
+          },
+          "lsi_3": {
+            "S": "Heat"
+          },
+          "lsi_4": {
+            "S": "W000151"
+          },
+          "lsi_5": {
+            "S": "Sauter"
+          },
+          "attribute1": {
+            "S": "BUI-00001"
+          },
+          "attribute2": {
+            "S": "MPID#P-00001-01-MG-002"
+          },
+          "attribute3": {
+            "S": "\"{\"\"Straße\"\":\"\"Semmlerweg\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Kyritz\"\"}\""
+          },
+          "attribute4": {
+            "S": "2022-01-28 12:00:00"
+          },
+          "attribute5": {
+            "S": "meter_replacement"
+          },
+          "attribute6": {
+            "S": "Heat"
+          },
+          "attribute7": {
+            "S": "10041641"
+          },
+          "attribute8": {
+            "S": "W000140"
+          },
+          "attribute9": {
+            "S": "3.303"
+          },
+          "attribute10": {
+            "S": "4458803"
+          },
+          "attribute11": {
+            "S": "W000151"
+          },
+          "attribute12": {
+            "S": "0"
+          },
+          "attribute13": {
+            "S": "Sauter"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meterintervention"
+          },
+          "id": {
+            "S": "MEINT#2023#Jan#replacement"
+          },
+          "gsi_1_pk": {
+            "S": "MEINT#2023#Jan#replacement"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00001-01-MG-003"
+          },
+          "lsi_2": {
+            "S": "first_meter_installation"
+          },
+          "lsi_3": {
+            "S": "Heat"
+          },
+          "lsi_4": {
+            "S": "W000152"
+          },
+          "lsi_5": {
+            "S": "Strohtmann"
+          },
+          "attribute1": {
+            "S": "BUI-00002"
+          },
+          "attribute2": {
+            "S": "MPID#P-00001-01-MG-003"
+          },
+          "attribute3": {
+            "S": "\"{\"\"Straße\"\":\"\"Saten Straße\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Potsdam\"\"}\""
+          },
+          "attribute4": {
+            "S": "2023-01-29 12:00:00"
+          },
+          "attribute5": {
+            "S": "first_meter_installation"
+          },
+          "attribute6": {
+            "S": "Heat"
+          },
+          "attribute7": {
+            "S": "7E9567565"
+          },
+          "attribute8": {
+            "S": "W000141"
+          },
+          "attribute9": {
+            "S": "3.303"
+          },
+          "attribute10": {
+            "S": "4458803"
+          },
+          "attribute11": {
+            "S": "W000152"
+          },
+          "attribute12": {
+            "S": "0"
+          },
+          "attribute13": {
+            "S": "Strohtmann"
+          }
+        },
+        {
+          "item_type": {
+            "S": "meterintervention"
+          },
+          "id": {
+            "S": "MEINT#2022#Jan#decommissioned"
+          },
+          "gsi_1_pk": {
+            "S": "MEINT#2022#Jan#decommissioned"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00001-01-MG-004"
+          },
+          "lsi_2": {
+            "S": "meter_decommissioning"
+          },
+          "lsi_3": {
+            "S": "Heat"
+          },
+          "lsi_4": {
+            "S": "W000153"
+          },
+          "lsi_5": {
+            "S": "Eluh"
+          },
+          "attribute1": {
+            "S": "BUI-00003"
+          },
+          "attribute2": {
+            "S": "MPID#P-00001-01-MG-004"
+          },
+          "attribute3": {
+            "S": "\"{\"\"Straße\"\":\"\"Troststraße\"\",\n \"\"Hausnummer\"\":\"\"14\"\",\n \"\"PLZ\"\":\"\"12445\"\",\n \"\"Ort\"\": \"\"Berlin\"\"}\""
+          },
+          "attribute4": {
+            "S": "2022-01-30 12:00:00"
+          },
+          "attribute5": {
+            "S": "meter_decommissioning"
+          },
+          "attribute6": {
+            "S": "Heat"
+          },
+          "attribute7": {
+            "S": "947364546"
+          },
+          "attribute8": {
+            "S": "W000142"
+          },
+          "attribute9": {
+            "S": "3.303"
+          },
+          "attribute10": {
+            "S": "4458803"
+          },
+          "attribute11": {
+            "S": "W000153"
+          },
+          "attribute12": {
+            "S": "3045"
+          },
+          "attribute13": {
+            "S": "Eluh"
+          }
+        },
+        {
+          "item_type": {
+            "S": "consumption"
+          },
+          "id": {
+            "S": "CON#2023#Oct#P-00002-01-MG-001"
+          },
+          "gsi_1_pk": {
+            "S": "CON#2023#Oct#P-00002-01-MG-001"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00001-01-MG-002"
+          },
+          "lsi_2": {
+            "S": "W01"
+          },
+          "lsi_3": {
+            "S": "10"
+          },
+          "attribute1": {
+            "S": "W000151"
+          },
+          "attribute2": {
+            "S": "MPID#P-00001-01-MG-002"
+          },
+          "attribute3": {
+            "S": "30.10.2023"
+          },
+          "attribute4": {
+            "S": "kWh"
+          },
+          "attribute5": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Kyritz\"}"
+          },
+          "attribute6": {
+            "S": "W01"
+          },
+          "attribute7": {
+            "S": "120 kWh"
+          },
+          "attribute8": {
+            "S": "420 kWh"
+          },
+          "attribute9": {
+            "S": "ENC-000345"
+          },
+          "attribute10": {
+            "S": "10"
+          },
+          "attribute11": {
+            "S": "2023"
+          },
+          "attribute12": {
+            "S": "BUI-00001"
+          }
+        },
+        {
+          "item_type": {
+            "S": "consumption"
+          },
+          "id": {
+            "S": "CON#2022#Oct#P-00456-01-MG-001"
+          },
+          "gsi_1_pk": {
+            "S": "CON#2022#Oct#P-00456-01-MG-001"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00001-01-MG-003"
+          },
+          "lsi_2": {
+            "S": "W01"
+          },
+          "lsi_3": {
+            "S": "10"
+          },
+          "attribute1": {
+            "S": "W000152"
+          },
+          "attribute2": {
+            "S": "MPID#P-00001-01-MG-003"
+          },
+          "attribute3": {
+            "S": "27.10.2022"
+          },
+          "attribute4": {
+            "S": "MWh"
+          },
+          "attribute5": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Potsdam\"}"
+          },
+          "attribute6": {
+            "S": "W01"
+          },
+          "attribute7": {
+            "S": "121 kWh"
+          },
+          "attribute8": {
+            "S": "421 kWh"
+          },
+          "attribute9": {
+            "S": "ENC-000346"
+          },
+          "attribute10": {
+            "S": "10"
+          },
+          "attribute11": {
+            "S": "2022"
+          },
+          "attribute12": {
+            "S": "BUI-00002"
+          }
+        },
+        {
+          "item_type": {
+            "S": "consumption"
+          },
+          "id": {
+            "S": "CON#2022#Nov#P-00033-01-MG-001"
+          },
+          "gsi_1_pk": {
+            "S": "CON#2022#Nov#P-00033-01-MG-001"
+          },
+          "lsi_1": {
+            "S": "MPID#P-00001-01-MG-004"
+          },
+          "lsi_2": {
+            "S": "G01"
+          },
+          "lsi_3": {
+            "S": "11"
+          },
+          "attribute1": {
+            "S": "W000153"
+          },
+          "attribute2": {
+            "S": "MPID#P-00001-01-MG-004"
+          },
+          "attribute3": {
+            "S": "28.11.2022"
+          },
+          "attribute4": {
+            "S": "m³"
+          },
+          "attribute5": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Malchin\"}"
+          },
+          "attribute6": {
+            "S": "G01"
+          },
+          "attribute7": {
+            "S": "122 kWh"
+          },
+          "attribute8": {
+            "S": "422 kWh"
+          },
+          "attribute9": {
+            "S": "ENC-000347"
+          },
+          "attribute10": {
+            "S": "11"
+          },
+          "attribute11": {
+            "S": "2022"
+          },
+          "attribute12": {
+            "S": "BUI-00003"
+          }
+        },
+        {
+          "item_type": {
+            "S": "maintenance"
+          },
+          "id": {
+            "S": "MAIN#P00234#2024#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "MAIN#P00234#2024#Jan"
+          },
+          "lsi_1": {
+            "S": "2024"
+          },
+          "lsi_2": {
+            "S": "XYZ Gmbh"
+          },
+          "lsi_3": {
+            "S": "P-00234"
+          },
+          "lsi_4": {
+            "S": "3434,22"
+          },
+          "attribute1": {
+            "S": "P-00234"
+          },
+          "attribute2": {
+            "S": "2024"
+          },
+          "attribute3": {
+            "S": "15.01.2024"
+          },
+          "attribute4": {
+            "S": "XYZ Gmbh"
+          },
+          "attribute5": {
+            "S": "Holger Tritt"
+          },
+          "attribute6": {
+            "S": "3434,22"
+          },
+          "attribute7": {
+            "S": "ja"
+          },
+          "attribute8": {
+            "S": "ja"
+          },
+          "attribute9": {
+            "S": "15.02.2024"
+          },
+          "attribute10": {
+            "S": "INVSX-000234-01-24-03"
+          },
+          "attribute11": {
+            "S": "No Comment"
+          }
+        },
+        {
+          "item_type": {
+            "S": "maintenance"
+          },
+          "id": {
+            "S": "MAIN#P00344#2023#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "MAIN#P00344#2023#Jan"
+          },
+          "lsi_1": {
+            "S": "2023"
+          },
+          "lsi_2": {
+            "S": "Sauter GmbH"
+          },
+          "lsi_3": {
+            "S": "P-00344"
+          },
+          "lsi_4": {
+            "S": "2123,34"
+          },
+          "attribute1": {
+            "S": "P-00344"
+          },
+          "attribute2": {
+            "S": "2023"
+          },
+          "attribute3": {
+            "S": "04.01.2023"
+          },
+          "attribute4": {
+            "S": "Sauter GmbH"
+          },
+          "attribute5": {
+            "S": "Steffan Grütz"
+          },
+          "attribute6": {
+            "S": "2123,34"
+          },
+          "attribute7": {
+            "S": "nein"
+          },
+          "attribute8": {
+            "S": "nein"
+          },
+          "attribute9": {
+            "S": "04.02.2023"
+          },
+          "attribute10": {
+            "S": "INVSX-000234-01-24-04"
+          },
+          "attribute11": {
+            "S": "Good Maintenance"
+          }
+        },
+        {
+          "item_type": {
+            "S": "maintenance"
+          },
+          "id": {
+            "S": "MAIN#P00764#2023#Oct"
+          },
+          "gsi_1_pk": {
+            "S": "MAIN#P00764#2023#Oct"
+          },
+          "lsi_1": {
+            "S": "2023"
+          },
+          "lsi_2": {
+            "S": "JAVIS GmbH"
+          },
+          "lsi_3": {
+            "S": "P-00764"
+          },
+          "lsi_4": {
+            "S": "1234,45"
+          },
+          "attribute1": {
+            "S": "P-00764"
+          },
+          "attribute2": {
+            "S": "2023"
+          },
+          "attribute3": {
+            "S": "12.10.2023"
+          },
+          "attribute4": {
+            "S": "JAVIS GmbH"
+          },
+          "attribute5": {
+            "S": "Timo Unger"
+          },
+          "attribute6": {
+            "S": "1234,45"
+          },
+          "attribute7": {
+            "S": "ja"
+          },
+          "attribute8": {
+            "S": "nein"
+          },
+          "attribute9": {
+            "S": "12.11.2023"
+          },
+          "attribute10": {
+            "S": "INVSX-000234-01-24-05"
+          },
+          "attribute11": {
+            "S": "Bad Maintenance"
+          }
+        },
+        {
+          "item_type": {
+            "S": "repair"
+          },
+          "id": {
+            "S": "FIX#P00234#2024#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "FIX#P00234#2024#Jan"
+          },
+          "lsi_1": {
+            "S": "2024"
+          },
+          "lsi_2": {
+            "S": "XYZ Gmbh"
+          },
+          "lsi_3": {
+            "S": "Breakdown"
+          },
+          "lsi_4": {
+            "S": "15.02.2024"
+          },
+          "attribute1": {
+            "S": "P-00234"
+          },
+          "attribute2": {
+            "S": "2024"
+          },
+          "attribute3": {
+            "S": "15.01.2024"
+          },
+          "attribute4": {
+            "S": "XYZ Gmbh"
+          },
+          "attribute5": {
+            "S": "Peter Maurer"
+          },
+          "attribute6": {
+            "S": "Brenner"
+          },
+          "attribute7": {
+            "S": "BUR-00001"
+          },
+          "attribute8": {
+            "S": "BUR-00002"
+          },
+          "attribute9": {
+            "S": "233,44"
+          },
+          "attribute10": {
+            "S": "Breakdown"
+          },
+          "attribute11": {
+            "S": "3434,22"
+          },
+          "attribute12": {
+            "S": "ja"
+          },
+          "attribute13": {
+            "S": "ja"
+          },
+          "attribute14": {
+            "S": "15.02.2024"
+          },
+          "attribute15": {
+            "S": "Eren Jäger"
+          },
+          "attribute16": {
+            "S": "INVSX-000234-01-24-03"
+          },
+          "attribute17": {
+            "S": "No Comment"
+          }
+        },
+        {
+          "item_type": {
+            "S": "repair"
+          },
+          "id": {
+            "S": "FIX#P00344#2023#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "FIX#P00344#2023#Jan"
+          },
+          "lsi_1": {
+            "S": "2023"
+          },
+          "lsi_2": {
+            "S": "Sauter GmbH"
+          },
+          "lsi_3": {
+            "S": "Clogged"
+          },
+          "lsi_4": {
+            "S": "04.02.2023"
+          },
+          "attribute1": {
+            "S": "P-00344"
+          },
+          "attribute2": {
+            "S": "2023"
+          },
+          "attribute3": {
+            "S": "04.01.2023"
+          },
+          "attribute4": {
+            "S": "Sauter GmbH"
+          },
+          "attribute5": {
+            "S": "Timo GUlla"
+          },
+          "attribute6": {
+            "S": "Pumpe"
+          },
+          "attribute7": {
+            "S": "PU-00001"
+          },
+          "attribute8": {
+            "S": "PU-00002"
+          },
+          "attribute9": {
+            "S": "270,44"
+          },
+          "attribute10": {
+            "S": "Clogged"
+          },
+          "attribute11": {
+            "S": "1345,95"
+          },
+          "attribute12": {
+            "S": "ja"
+          },
+          "attribute13": {
+            "S": "nein"
+          },
+          "attribute14": {
+            "S": "04.02.2023"
+          },
+          "attribute15": {
+            "S": "Mikasa Ackermann"
+          },
+          "attribute16": {
+            "S": "INVSX-000234-01-24-04"
+          },
+          "attribute17": {
+            "S": "Good Repair"
+          }
+        },
+        {
+          "item_type": {
+            "S": "repair"
+          },
+          "id": {
+            "S": "FIX#P00764#2023#Oct"
+          },
+          "gsi_1_pk": {
+            "S": "FIX#P00764#2023#Oct"
+          },
+          "lsi_1": {
+            "S": "2023"
+          },
+          "lsi_2": {
+            "S": "JAVIS GmbH"
+          },
+          "lsi_3": {
+            "S": "Breakdown"
+          },
+          "lsi_4": {
+            "S": "12.11.2023"
+          },
+          "attribute1": {
+            "S": "P-00764"
+          },
+          "attribute2": {
+            "S": "2023"
+          },
+          "attribute3": {
+            "S": "12.10.2023"
+          },
+          "attribute4": {
+            "S": "JAVIS GmbH"
+          },
+          "attribute5": {
+            "S": "Dennis Can"
+          },
+          "attribute6": {
+            "S": "Wärmetauscher"
+          },
+          "attribute7": {
+            "S": "HX-00007"
+          },
+          "attribute8": {
+            "S": "HX-00008"
+          },
+          "attribute9": {
+            "S": "3433,44"
+          },
+          "attribute10": {
+            "S": "Breakdown"
+          },
+          "attribute11": {
+            "S": "1899,95"
+          },
+          "attribute12": {
+            "S": "nein"
+          },
+          "attribute13": {
+            "S": "nein "
+          },
+          "attribute14": {
+            "S": "12.11.2023"
+          },
+          "attribute15": {
+            "S": "Berthold Neumann"
+          },
+          "attribute16": {
+            "S": "INVSX-000234-01-24-05"
+          },
+          "attribute17": {
+            "S": "Bad Repair"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod_inspection"
+          },
+          "id": {
+            "S": "INSP#P00234#2024#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "INSP#P00234#2024#Jan"
+          },
+          "lsi_1": {
+            "S": "2024"
+          },
+          "lsi_2": {
+            "S": "XYZ Gmbh"
+          },
+          "lsi_3": {
+            "S": "19.07.2024"
+          },
+          "attribute1": {
+            "S": "1456,95"
+          },
+          "attribute2": {
+            "S": "15.01.2024"
+          },
+          "attribute3": {
+            "S": "2024"
+          },
+          "attribute4": {
+            "S": "CON-00659"
+          },
+          "attribute5": {
+            "S": "Shahida Ahlebrandt"
+          },
+          "attribute6": {
+            "S": "INSP-21000001"
+          },
+          "attribute7": {
+            "S": "XYZ Gmbh"
+          },
+          "attribute8": {
+            "S": "I18N-002052"
+          },
+          "attribute9": {
+            "S": "INV-19000001"
+          },
+          "attribute10": {
+            "S": "2"
+          },
+          "attribute11": {
+            "S": "P-00006"
+          },
+          "attribute12": {
+            "S": "Berlin"
+          },
+          "attribute13": {
+            "S": "Shahida Ahlebrandt"
+          },
+          "attribute14": {
+            "S": "19.07.2024"
+          },
+          "attribute15": {
+            "S": "CON-00659"
+          },
+          "attribute16": {
+            "S": "I18N-00058"
+          },
+          "attribute17": {
+            "S": "SUP-80563"
+          },
+          "attribute18": {
+            "S": "Maxim The Pooh"
+          },
+          "attribute19": {
+            "S": "1682047882"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod_inspection"
+          },
+          "id": {
+            "S": "INSP#P00344#2023#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "INSP#P00344#2023#Jan"
+          },
+          "lsi_1": {
+            "S": "2023"
+          },
+          "lsi_2": {
+            "S": "Sauter GmbH"
+          },
+          "lsi_3": {
+            "S": "04.02.2023"
+          },
+          "attribute1": {
+            "S": "1223,95"
+          },
+          "attribute2": {
+            "S": "08.01.2023"
+          },
+          "attribute3": {
+            "S": "2023"
+          },
+          "attribute4": {
+            "S": "CON-00660"
+          },
+          "attribute5": {
+            "S": "Erik Dubre"
+          },
+          "attribute6": {
+            "S": "INSP-21000002"
+          },
+          "attribute7": {
+            "S": "Sauter GmbH"
+          },
+          "attribute8": {
+            "S": "I18N-002053"
+          },
+          "attribute9": {
+            "S": "INV-19000002"
+          },
+          "attribute10": {
+            "S": "3"
+          },
+          "attribute11": {
+            "S": "P-00007"
+          },
+          "attribute12": {
+            "S": "Hamburg"
+          },
+          "attribute13": {
+            "S": "Erik Dubre"
+          },
+          "attribute14": {
+            "S": "04.02.2023"
+          },
+          "attribute15": {
+            "S": "CON-00660"
+          },
+          "attribute16": {
+            "S": "I18N-00059"
+          },
+          "attribute17": {
+            "S": "SUP-80564"
+          },
+          "attribute18": {
+            "S": "The Supplier GmbH"
+          },
+          "attribute19": {
+            "S": "1682047882"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod_inspection"
+          },
+          "id": {
+            "S": "INSP#P00764#2023#Oct"
+          },
+          "gsi_1_pk": {
+            "S": "INSP#P00764#2023#Oct"
+          },
+          "lsi_1": {
+            "S": "2023"
+          },
+          "lsi_2": {
+            "S": "JAVIS GmbH"
+          },
+          "lsi_3": {
+            "S": "12.11.2023"
+          },
+          "attribute1": {
+            "S": "1022,95"
+          },
+          "attribute2": {
+            "S": "23.10.2023"
+          },
+          "attribute3": {
+            "S": "2023"
+          },
+          "attribute4": {
+            "S": "CON-00661"
+          },
+          "attribute5": {
+            "S": "Karl Es"
+          },
+          "attribute6": {
+            "S": "INSP-21000003"
+          },
+          "attribute7": {
+            "S": "JAVIS GmbH"
+          },
+          "attribute8": {
+            "S": "I18N-002054"
+          },
+          "attribute9": {
+            "S": "INV-19000003"
+          },
+          "attribute10": {
+            "S": "4"
+          },
+          "attribute11": {
+            "S": "P-00008"
+          },
+          "attribute12": {
+            "S": "Potsdam"
+          },
+          "attribute13": {
+            "S": "Karl Es"
+          },
+          "attribute14": {
+            "S": "12.11.2023"
+          },
+          "attribute15": {
+            "S": "CON-00661"
+          },
+          "attribute16": {
+            "S": "I18N-00060"
+          },
+          "attribute17": {
+            "S": "SUP-80565"
+          },
+          "attribute18": {
+            "S": "Online Shop Tekken GmbH"
+          },
+          "attribute19": {
+            "S": "1682047882"
+          }
+        },
+        {
+          "item_type": {
+            "S": "revision"
+          },
+          "id": {
+            "S": "POD#REV#DN-00002-01-04#2024#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "POD#REV#DN-00002-01-04#2024#Jan"
+          },
+          "attribute1": {
+            "S": "comment"
+          },
+          "attribute2": {
+            "S": "15.01.2024"
+          },
+          "attribute3": {
+            "S": "CON-00659"
+          },
+          "attribute4": {
+            "S": "Shahida Ahlebrandt"
+          }
+        },
+        {
+          "item_type": {
+            "S": "revision"
+          },
+          "id": {
+            "S": "POD#REV#DN-00003-01-04#2023#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "POD#REV#DN-00003-01-04#2023#Jan"
+          },
+          "attribute1": {
+            "S": "comment"
+          },
+          "attribute2": {
+            "S": "08.01.2023"
+          },
+          "attribute3": {
+            "S": "CON-00660"
+          },
+          "attribute4": {
+            "S": "Erik Dubre"
+          }
+        },
+        {
+          "item_type": {
+            "S": "revision"
+          },
+          "id": {
+            "S": "POD#REV#DN-00004-01-04#2023#Oct"
+          },
+          "gsi_1_pk": {
+            "S": "POD#REV#DN-00004-01-04#2023#Oct"
+          },
+          "attribute1": {
+            "S": "comment"
+          },
+          "attribute2": {
+            "S": "23.10.2023"
+          },
+          "attribute3": {
+            "S": "CON-00661"
+          },
+          "attribute4": {
+            "S": "Karl Es"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod_status_report"
+          },
+          "id": {
+            "S": "STATR#P00234#2024#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "STATR#P00234#2024#Jan"
+          },
+          "attribute1": {
+            "S": "08.01.2024"
+          },
+          "attribute2": {
+            "S": "I18N-00058"
+          },
+          "attribute3": {
+            "S": "CON-27384"
+          },
+          "attribute4": {
+            "S": "Mike Maroon"
+          },
+          "attribute5": {
+            "S": "01.09.2023"
+          },
+          "attribute6": {
+            "S": "CON-00564"
+          },
+          "attribute7": {
+            "S": "Mike Maroon"
+          },
+          "attribute8": {
+            "S": "12.09.2023"
+          },
+          "attribute9": {
+            "S": "P00001"
+          },
+          "attribute10": {
+            "S": "I18N-00063"
+          },
+          "attribute11": {
+            "S": "I18N-00302"
+          },
+          "attribute12": {
+            "S": "\"text\""
+          },
+          "attribute13": {
+            "S": "I18N-00063"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod_status_report"
+          },
+          "id": {
+            "S": "STATR#P00344#2023#Jan"
+          },
+          "gsi_1_pk": {
+            "S": "STATR#P00344#2023#Jan"
+          },
+          "attribute1": {
+            "S": "15.01.2023"
+          },
+          "attribute2": {
+            "S": "I18N-00059"
+          },
+          "attribute3": {
+            "S": "CON-27385"
+          },
+          "attribute4": {
+            "S": "Shahida Ahlebrandt"
+          },
+          "attribute5": {
+            "S": "01.02.2023"
+          },
+          "attribute6": {
+            "S": "CON-00565"
+          },
+          "attribute7": {
+            "S": "Mike Maroon"
+          },
+          "attribute8": {
+            "S": "17.01.2023"
+          },
+          "attribute9": {
+            "S": "P00002"
+          },
+          "attribute10": {
+            "S": "I18N-00064"
+          },
+          "attribute11": {
+            "S": "I18N-00303"
+          },
+          "attribute12": {
+            "S": "\"text\""
+          },
+          "attribute13": {
+            "S": "I18N-00064"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod_status_report"
+          },
+          "id": {
+            "S": "STATR#P00764#2023#Oct"
+          },
+          "gsi_1_pk": {
+            "S": "STATR#P00764#2023#Oct"
+          },
+          "attribute1": {
+            "S": "02.10.2023"
+          },
+          "attribute2": {
+            "S": "I18N-00060"
+          },
+          "attribute3": {
+            "S": "CON-27386"
+          },
+          "attribute4": {
+            "S": "Erik Dubre"
+          },
+          "attribute5": {
+            "S": "08.10.2023"
+          },
+          "attribute6": {
+            "S": "CON-00566"
+          },
+          "attribute7": {
+            "S": "Mike Maroon"
+          },
+          "attribute8": {
+            "S": "05.10.2023"
+          },
+          "attribute9": {
+            "S": "P00003"
+          },
+          "attribute10": {
+            "S": "I18N-00065"
+          },
+          "attribute11": {
+            "S": "I18N-00304"
+          },
+          "attribute12": {
+            "S": "\"text\""
+          },
+          "attribute13": {
+            "S": "I18N-00065"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier"
+          },
+          "id": {
+            "S": "SUP-00102"
+          },
+          "gsi_1_pk": {
+            "S": "SUP-00102"
+          },
+          "lsi_1": {
+            "S": "Elektrofirma"
+          },
+          "attribute1": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute2": {
+            "S": "Organisation"
+          },
+          "attribute3": {
+            "S": "Elektrofirma"
+          },
+          "attribute4": {
+            "S": "Elektrik GmbH"
+          },
+          "attribute5": {
+            "S": "ORG-090001"
+          },
+          "attribute6": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Malchin\"}"
+          },
+          "attribute7": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Malchin\"}"
+          },
+          "attribute8": {
+            "S": "likes to talk"
+          },
+          "attribute9": {
+            "S": "yes"
+          },
+          "attribute10": {
+            "S": "CON-00001"
+          },
+          "attribute13": {
+            "S": "2"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier"
+          },
+          "id": {
+            "S": "SUP-00103"
+          },
+          "gsi_1_pk": {
+            "S": "SUP-00103"
+          },
+          "lsi_1": {
+            "S": "Elektriker"
+          },
+          "attribute1": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute2": {
+            "S": "Einzelkunde"
+          },
+          "attribute3": {
+            "S": "Elektriker"
+          },
+          "attribute4": {
+            "S": "Peter Müller"
+          },
+          "attribute6": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Kyritz\"}"
+          },
+          "attribute7": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Kyritz\"}"
+          },
+          "attribute8": {
+            "S": "likes Suhsi"
+          },
+          "attribute9": {
+            "S": "no"
+          },
+          "attribute10": {
+            "S": "CON-00002"
+          },
+          "attribute11": {
+            "S": "CON-00022"
+          },
+          "attribute13": {
+            "S": "3"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier"
+          },
+          "id": {
+            "S": "SUP-00104"
+          },
+          "gsi_1_pk": {
+            "S": "SUP-00104"
+          },
+          "lsi_1": {
+            "S": "Fachhandel"
+          },
+          "attribute1": {
+            "S": "www.xyz-8301.com"
+          },
+          "attribute2": {
+            "S": "Organisation"
+          },
+          "attribute3": {
+            "S": "Fachhandel"
+          },
+          "attribute4": {
+            "S": "Fachhandel GmbH"
+          },
+          "attribute5": {
+            "S": "ORG-090002"
+          },
+          "attribute6": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Potsdam\"}"
+          },
+          "attribute7": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Potsdam\"}"
+          },
+          "attribute8": {
+            "S": "likes Suhsi"
+          },
+          "attribute9": {
+            "S": "yes"
+          },
+          "attribute10": {
+            "S": "CON-00003"
+          },
+          "attribute13": {
+            "S": "4"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier_contract"
+          },
+          "id": {
+            "S": "SX-00023"
+          },
+          "gsi_1_pk": {
+            "S": "SX-00023"
+          },
+          "lsi_1": {
+            "S": "Bauvertrag"
+          },
+          "lsi_2": {
+            "S": "ja"
+          },
+          "lsi_3": {
+            "S": "30.11.2026"
+          },
+          "attribute1": {
+            "S": "Bauvertrag"
+          },
+          "attribute2": {
+            "S": "12.08.2023"
+          },
+          "attribute3": {
+            "S": "Miller"
+          },
+          "attribute4": {
+            "S": "12"
+          },
+          "attribute5": {
+            "S": "01.09.2023"
+          },
+          "attribute6": {
+            "S": "9"
+          },
+          "attribute7": {
+            "S": "ja"
+          },
+          "attribute8": {
+            "S": "12"
+          },
+          "attribute9": {
+            "S": "nein"
+          },
+          "attribute10": {
+            "S": "30.11.2026"
+          },
+          "attribute11": {
+            "S": "Infos zum Eingang"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier_contract"
+          },
+          "id": {
+            "S": "SX-00024"
+          },
+          "gsi_1_pk": {
+            "S": "SX-00024"
+          },
+          "lsi_1": {
+            "S": "Dienstleistungsvertrag"
+          },
+          "lsi_2": {
+            "S": "nein"
+          },
+          "lsi_3": {
+            "S": "30.09.2027"
+          },
+          "attribute1": {
+            "S": "Dienstleistungsvertrag"
+          },
+          "attribute2": {
+            "S": "13.08.2022"
+          },
+          "attribute3": {
+            "S": "Peters"
+          },
+          "attribute4": {
+            "S": "12"
+          },
+          "attribute5": {
+            "S": "01.09.2023"
+          },
+          "attribute6": {
+            "S": "9"
+          },
+          "attribute7": {
+            "S": "nein"
+          },
+          "attribute8": {
+            "S": "12"
+          },
+          "attribute9": {
+            "S": "nein"
+          },
+          "attribute10": {
+            "S": "30.09.2027"
+          },
+          "attribute11": {
+            "S": "Nice Comment"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier_contract"
+          },
+          "id": {
+            "S": "SX-00025"
+          },
+          "gsi_1_pk": {
+            "S": "SX-00025"
+          },
+          "lsi_1": {
+            "S": "Bauvertrag"
+          },
+          "lsi_2": {
+            "S": "ja"
+          },
+          "lsi_3": {
+            "S": "01.10.2027"
+          },
+          "attribute1": {
+            "S": "Bauvertrag"
+          },
+          "attribute2": {
+            "S": "23.04.2022"
+          },
+          "attribute3": {
+            "S": "Oskret"
+          },
+          "attribute4": {
+            "S": "12"
+          },
+          "attribute5": {
+            "S": "01.05.2022"
+          },
+          "attribute6": {
+            "S": "9"
+          },
+          "attribute7": {
+            "S": "ja"
+          },
+          "attribute8": {
+            "S": "12"
+          },
+          "attribute9": {
+            "S": "ja"
+          },
+          "attribute10": {
+            "S": "01.10.2027"
+          },
+          "attribute11": {
+            "S": "Bad Comment"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier_invoice"
+          },
+          "id": {
+            "S": "INVSX-000234-01-24-03"
+          },
+          "gsi_1_pk": {
+            "S": "INVSX-000234-01-24-03"
+          },
+          "lsi_1": {
+            "S": "SUP-00102"
+          },
+          "lsi_2": {
+            "S": "ENC-000234"
+          },
+          "lsi_3": {
+            "S": "17.05.2023"
+          },
+          "lsi_4": {
+            "S": "2023"
+          },
+          "attribute1": {
+            "S": "SUP-00102"
+          },
+          "attribute2": {
+            "S": "ENC-000234"
+          },
+          "attribute3": {
+            "S": "Robert Komi"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Malchin\"}"
+          },
+          "attribute5": {
+            "S": "Reparatur von XCZ"
+          },
+          "attribute6": {
+            "S": "4.302,57€"
+          },
+          "attribute7": {
+            "S": "17.05.2023"
+          },
+          "attribute8": {
+            "S": "2023"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier_invoice"
+          },
+          "id": {
+            "S": "INVSX-000234-01-24-04"
+          },
+          "gsi_1_pk": {
+            "S": "INVSX-000234-01-24-04"
+          },
+          "lsi_1": {
+            "S": "SUP-00103"
+          },
+          "lsi_2": {
+            "S": "ENC-000235"
+          },
+          "lsi_3": {
+            "S": "23.09.2022"
+          },
+          "lsi_4": {
+            "S": "2022"
+          },
+          "attribute1": {
+            "S": "SUP-00103"
+          },
+          "attribute2": {
+            "S": "ENC-000235"
+          },
+          "attribute3": {
+            "S": "Torsten Graus"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Frankfurt\"}"
+          },
+          "attribute5": {
+            "S": "Reparatur von XCZ"
+          },
+          "attribute6": {
+            "S": "550,95€"
+          },
+          "attribute7": {
+            "S": "23.09.2022"
+          },
+          "attribute8": {
+            "S": "2022"
+          }
+        },
+        {
+          "item_type": {
+            "S": "supplier_invoice"
+          },
+          "id": {
+            "S": "INVSX-000234-01-24-05"
+          },
+          "gsi_1_pk": {
+            "S": "INVSX-000234-01-24-05"
+          },
+          "lsi_1": {
+            "S": "SUP-00104"
+          },
+          "lsi_2": {
+            "S": "ENC-000236"
+          },
+          "lsi_3": {
+            "S": "12.09.2023"
+          },
+          "lsi_4": {
+            "S": "2023"
+          },
+          "attribute1": {
+            "S": "SUP-00104"
+          },
+          "attribute2": {
+            "S": "ENC-000236"
+          },
+          "attribute3": {
+            "S": "Demetri Zymker"
+          },
+          "attribute4": {
+            "S": "{\"Straße\":\"Goringstraße\",\n \"Hausnummer\":\"3\",\n \"PLZ\":\"10119\",\n \"Ort\": \"Potsdam\"}"
+          },
+          "attribute5": {
+            "S": "Reparatur von XCZ"
+          },
+          "attribute6": {
+            "S": "10.067,98€"
+          },
+          "attribute7": {
+            "S": "12.09.2023"
+          },
+          "attribute8": {
+            "S": "2023"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod"
+          },
+          "id": {
+            "S": " P-00102"
+          },
+          "gsi_1_pk": {
+            "S": " P-00102"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "attribute1": {
+            "S": "pod"
+          },
+          "attribute2": {
+            "S": "P-00102"
+          },
+          "attribute3": {
+            "S": "\"{\"\"Straße\"\":\"\"Oranienburger Straße\"\", \"\"Hausnummer\"\":\"\"12\"\", \"\"PLZ\"\":\"\"100119\"\", \"\"Ort\"\": \"\"Berlin\"\"}\""
+          },
+          "attribute4": {
+            "S": "BUI-00001"
+          },
+          "attribute5": {
+            "S": "“This is a comment”"
+          },
+          "attribute6": {
+            "S": "I18N-00230"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod"
+          },
+          "id": {
+            "S": " P-00103"
+          },
+          "gsi_1_pk": {
+            "S": " P-00103"
+          },
+          "lsi_1": {
+            "S": "BUI-00002"
+          },
+          "attribute1": {
+            "S": "pod"
+          },
+          "attribute2": {
+            "S": "P-00103"
+          },
+          "attribute3": {
+            "S": "\"{\"\"Straße\"\":\"\"Nelken Straße\"\", \"\"Hausnummer\"\":\"\"12\"\", \"\"PLZ\"\":\"\"100119\"\", \"\"Ort\"\": \"\"Kyritz\"\"}\""
+          },
+          "attribute4": {
+            "S": "BUI-00002"
+          },
+          "attribute5": {
+            "S": "“This is a comment”"
+          },
+          "attribute6": {
+            "S": "I18N-00231"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pod"
+          },
+          "id": {
+            "S": " P-00104"
+          },
+          "gsi_1_pk": {
+            "S": " P-00104"
+          },
+          "lsi_1": {
+            "S": "BUI-00003"
+          },
+          "attribute1": {
+            "S": "pod"
+          },
+          "attribute2": {
+            "S": "P-00104"
+          },
+          "attribute3": {
+            "S": "\"{\"\"Straße\"\":\"\"Feldmann Straße\"\", \"\"Hausnummer\"\":\"\"12\"\", \"\"PLZ\"\":\"\"100119\"\", \"\"Ort\"\": \"\"Hamburg\"\"}\""
+          },
+          "attribute4": {
+            "S": "BUI-00003"
+          },
+          "attribute5": {
+            "S": "“This is a comment”"
+          },
+          "attribute6": {
+            "S": "I18N-00232"
+          }
+        },
+        {
+          "item_type": {
+            "S": "distribution_network"
+          },
+          "id": {
+            "S": "DN-00001"
+          },
+          "gsi_1_pk": {
+            "S": "DN-00001"
+          },
+          "lsi_1": {
+            "S": "P-00001"
+          },
+          "attribute1": {
+            "S": "DN-00001"
+          },
+          "attribute2": {
+            "S": "I18N-00074"
+          },
+          "attribute3": {
+            "S": "BUI-00001"
+          },
+          "attribute4": {
+            "S": "Oraniendamm 6-10"
+          },
+          "attribute5": {
+            "S": "I18N-00121"
+          },
+          "attribute6": {
+            "S": "Type 1"
+          },
+          "attribute7": {
+            "S": "Type 1"
+          },
+          "attribute8": {
+            "S": "400m"
+          },
+          "attribute9": {
+            "S": "Kupfer"
+          },
+          "attribute10": {
+            "S": "P-00001"
+          },
+          "attribute11": {
+            "S": "I18N-00067"
+          }
+        },
+        {
+          "item_type": {
+            "S": "distribution_network"
+          },
+          "id": {
+            "S": "DN-00002"
+          },
+          "gsi_1_pk": {
+            "S": "DN-00002"
+          },
+          "lsi_1": {
+            "S": "P-00002"
+          },
+          "attribute1": {
+            "S": "DN-00002"
+          },
+          "attribute2": {
+            "S": "I18N-00075"
+          },
+          "attribute3": {
+            "S": "BUI-00002"
+          },
+          "attribute4": {
+            "S": "Nelkens Straße 12"
+          },
+          "attribute5": {
+            "S": "I18N-00122"
+          },
+          "attribute6": {
+            "S": "Type 2"
+          },
+          "attribute7": {
+            "S": "Type 2"
+          },
+          "attribute8": {
+            "S": "700m"
+          },
+          "attribute9": {
+            "S": "Gummi"
+          },
+          "attribute10": {
+            "S": "P-00002"
+          },
+          "attribute11": {
+            "S": "I18N-00068"
+          }
+        },
+        {
+          "item_type": {
+            "S": "distribution_network"
+          },
+          "id": {
+            "S": "DN-00003"
+          },
+          "gsi_1_pk": {
+            "S": "DN-00003"
+          },
+          "lsi_1": {
+            "S": "P-00003"
+          },
+          "attribute1": {
+            "S": "DN-00003"
+          },
+          "attribute2": {
+            "S": "I18N-00076"
+          },
+          "attribute3": {
+            "S": "BUI-00003"
+          },
+          "attribute4": {
+            "S": "Feldmann Straße 23"
+          },
+          "attribute5": {
+            "S": "I18N-00123"
+          },
+          "attribute6": {
+            "S": "Type 3"
+          },
+          "attribute7": {
+            "S": "Type 3"
+          },
+          "attribute8": {
+            "S": "1200m"
+          },
+          "attribute9": {
+            "S": "Gold"
+          },
+          "attribute10": {
+            "S": "P-00003"
+          },
+          "attribute11": {
+            "S": "I18N-00069"
+          }
+        },
+        {
+          "item_type": {
+            "S": "distribution_block"
+          },
+          "id": {
+            "S": "DB-00001"
+          },
+          "gsi_1_pk": {
+            "S": "DB-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00001"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00001"
+          },
+          "attribute1": {
+            "S": "distribution_block"
+          },
+          "attribute2": {
+            "S": "12.03.2023"
+          },
+          "attribute3": {
+            "S": "330,00€"
+          },
+          "attribute4": {
+            "S": "23.03.2029"
+          },
+          "attribute5": {
+            "S": "Eluh"
+          },
+          "attribute6": {
+            "S": "290,00€"
+          },
+          "attribute7": {
+            "S": "I18N-01391"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "2002-01-01T00:00:00.000Z"
+          },
+          "attribute10": {
+            "S": "I18N-00194"
+          },
+          "attribute11": {
+            "S": "I18N-001241"
+          },
+          "attribute12": {
+            "S": "DN-00001"
+          },
+          "attribute13": {
+            "S": "I18N-00088"
+          },
+          "attribute14": {
+            "S": "P-00001"
+          },
+          "attribute15": {
+            "S": "#NA_data"
+          },
+          "attribute16": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "district_heating_station"
+          },
+          "id": {
+            "S": "DHS-00001"
+          },
+          "gsi_1_pk": {
+            "S": "DHS-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00001"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00001"
+          },
+          "attribute1": {
+            "S": "DHS-00001"
+          },
+          "attribute2": {
+            "S": "12.03.2024"
+          },
+          "attribute3": {
+            "S": "440,00€"
+          },
+          "attribute4": {
+            "S": "09.03.2024"
+          },
+          "attribute5": {
+            "S": "Eluh"
+          },
+          "attribute6": {
+            "S": "290,00€"
+          },
+          "attribute7": {
+            "S": "I18N-01391"
+          },
+          "attribute8": {
+            "S": "09.04.2029"
+          },
+          "attribute9": {
+            "S": "BUI-00001"
+          },
+          "attribute10": {
+            "S": "I18N-00194"
+          },
+          "attribute11": {
+            "S": "DN-00001"
+          },
+          "attribute12": {
+            "S": "I18N-00681"
+          },
+          "attribute13": {
+            "S": "I18N-00689"
+          },
+          "attribute15": {
+            "S": "I18N-00110"
+          },
+          "attribute16": {
+            "S": "33"
+          },
+          "attribute17": {
+            "S": "6"
+          },
+          "attribute18": {
+            "S": "44"
+          },
+          "attribute19": {
+            "S": "I18N-001081"
+          },
+          "attribute20": {
+            "S": "7"
+          },
+          "attribute21": {
+            "S": "I18N-00541"
+          },
+          "attribute22": {
+            "S": "P-00001"
+          },
+          "attribute23": {
+            "S": "124324"
+          },
+          "attribute24": {
+            "S": "01.05.2025"
+          },
+          "attribute25": {
+            "S": "123k321"
+          },
+          "attribute26": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "actuator"
+          },
+          "id": {
+            "S": "ACT-00001"
+          },
+          "gsi_1_pk": {
+            "S": "ACT-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00001"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00001"
+          },
+          "attribute1": {
+            "S": "I18N-001163"
+          },
+          "attribute2": {
+            "S": "I18N-00116"
+          },
+          "attribute3": {
+            "S": "04.12.2023"
+          },
+          "attribute4": {
+            "S": "350,00€"
+          },
+          "attribute5": {
+            "S": "28.11.2023"
+          },
+          "attribute6": {
+            "S": "Eluh"
+          },
+          "attribute7": {
+            "S": "290,00€"
+          },
+          "attribute8": {
+            "S": "I18N-01391"
+          },
+          "attribute9": {
+            "S": "30.11.2029"
+          },
+          "attribute10": {
+            "S": "BUI-00001"
+          },
+          "attribute11": {
+            "S": "I18N-00190"
+          },
+          "attribute12": {
+            "S": "DN-00001"
+          },
+          "attribute13": {
+            "S": "I18N-00623"
+          },
+          "attribute14": {
+            "S": "P-00001"
+          },
+          "attribute15": {
+            "S": "S857HDT665"
+          },
+          "attribute16": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "boiler"
+          },
+          "id": {
+            "S": "BOI-00001"
+          },
+          "gsi_1_pk": {
+            "S": "BOI-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00001"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00001"
+          },
+          "attribute1": {
+            "S": "14.05.2023"
+          },
+          "attribute2": {
+            "S": "330,00€"
+          },
+          "attribute3": {
+            "S": "01.05.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "290,00€"
+          },
+          "attribute6": {
+            "S": "I18N-01391"
+          },
+          "attribute7": {
+            "S": "30.05.2029"
+          },
+          "attribute8": {
+            "S": "1122"
+          },
+          "attribute9": {
+            "S": "#NA_data"
+          },
+          "attribute10": {
+            "S": "I18N-00013"
+          },
+          "attribute11": {
+            "S": "#NA_data"
+          },
+          "attribute12": {
+            "S": "I18N-00057"
+          },
+          "attribute13": {
+            "S": "95"
+          },
+          "attribute14": {
+            "S": "748"
+          },
+          "attribute15": {
+            "S": "#NA_data"
+          },
+          "attribute16": {
+            "S": "#NA_data"
+          },
+          "attribute17": {
+            "S": "#NA_data"
+          },
+          "attribute18": {
+            "S": "I18N-00058"
+          },
+          "attribute19": {
+            "S": "#NA_data"
+          },
+          "attribute20": {
+            "S": "I18N-00058"
+          },
+          "attribute21": {
+            "S": "I18N-00076"
+          },
+          "attribute22": {
+            "S": "#NA_data"
+          },
+          "attribute23": {
+            "S": "#NA_data"
+          },
+          "attribute24": {
+            "S": "I18N-00057"
+          },
+          "attribute25": {
+            "S": "“This is a comment”"
+          },
+          "attribute26": {
+            "S": "#NA_data"
+          },
+          "attribute27": {
+            "S": "BUI-00001"
+          },
+          "attribute28": {
+            "S": "I18N-00191"
+          },
+          "attribute29": {
+            "S": "DN-00001"
+          },
+          "attribute30": {
+            "S": "I18N-00086"
+          },
+          "attribute31": {
+            "S": "P-00001"
+          },
+          "attribute32": {
+            "S": "S665T6DG"
+          },
+          "attribute33": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "burner"
+          },
+          "id": {
+            "S": "BUR-00001"
+          },
+          "gsi_1_pk": {
+            "S": "BUR-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00001"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00001"
+          },
+          "attribute1": {
+            "S": "01.02.2023"
+          },
+          "attribute2": {
+            "S": "330,00€"
+          },
+          "attribute3": {
+            "S": "15.01.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "290,00€"
+          },
+          "attribute6": {
+            "S": "I18N-01391"
+          },
+          "attribute7": {
+            "S": "28.02.2029"
+          },
+          "attribute8": {
+            "S": "600"
+          },
+          "attribute9": {
+            "S": "940"
+          },
+          "attribute10": {
+            "S": "I18N-00107"
+          },
+          "attribute11": {
+            "S": "I18N-00881"
+          },
+          "attribute12": {
+            "S": "I18N-00105"
+          },
+          "attribute13": {
+            "S": "BUI-00001"
+          },
+          "attribute14": {
+            "S": "I18N-00192"
+          },
+          "attribute15": {
+            "S": "DN-00001"
+          },
+          "attribute16": {
+            "S": "I18N-00087"
+          },
+          "attribute17": {
+            "S": "P-00001"
+          },
+          "attribute18": {
+            "S": "1,00€"
+          },
+          "attribute19": {
+            "S": "12.11.2025"
+          },
+          "attribute20": {
+            "S": "hg653HDi565"
+          },
+          "attribute21": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "circulation_pump"
+          },
+          "id": {
+            "S": "PU-00001"
+          },
+          "gsi_1_pk": {
+            "S": "PU-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00001"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00001"
+          },
+          "attribute1": {
+            "S": "15.03.2023"
+          },
+          "attribute2": {
+            "S": "#NA_data"
+          },
+          "attribute3": {
+            "S": "01.03.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "500,00€"
+          },
+          "attribute6": {
+            "S": "I18N-01005"
+          },
+          "attribute7": {
+            "S": "30.03.2029"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "PU-00001"
+          },
+          "attribute10": {
+            "S": "#NA_data"
+          },
+          "attribute11": {
+            "S": "I18N-001291"
+          },
+          "attribute12": {
+            "S": "#NA_data"
+          },
+          "attribute13": {
+            "S": "#NA_data"
+          },
+          "attribute14": {
+            "S": "#NA_data"
+          },
+          "attribute15": {
+            "S": "#NA_data"
+          },
+          "attribute16": {
+            "S": "45"
+          },
+          "attribute17": {
+            "S": "14"
+          },
+          "attribute18": {
+            "S": "3600"
+          },
+          "attribute19": {
+            "S": "2200"
+          },
+          "attribute20": {
+            "S": "#NA_data"
+          },
+          "attribute21": {
+            "S": "#NA_data"
+          },
+          "attribute22": {
+            "S": "#NA_data"
+          },
+          "attribute23": {
+            "S": "I18N-001165"
+          },
+          "attribute24": {
+            "S": "PU-00001"
+          },
+          "attribute25": {
+            "S": "circulation_pump"
+          },
+          "attribute26": {
+            "S": "I18N-00203"
+          },
+          "attribute27": {
+            "S": "DN-00001"
+          },
+          "attribute28": {
+            "S": "I18N-00580"
+          },
+          "attribute29": {
+            "S": "P-00001"
+          },
+          "attribute30": {
+            "S": "1"
+          },
+          "attribute31": {
+            "S": "23.03.2025"
+          },
+          "attribute32": {
+            "S": "123k654"
+          },
+          "attribute33": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "exhaust_system"
+          },
+          "id": {
+            "S": "XS-00001"
+          },
+          "gsi_1_pk": {
+            "S": "XS-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00001"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00001"
+          },
+          "attribute1": {
+            "S": "30.03.2023"
+          },
+          "attribute2": {
+            "S": "#NA_data"
+          },
+          "attribute3": {
+            "S": "15.03.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "#NA_data"
+          },
+          "attribute6": {
+            "S": "I18N-01397"
+          },
+          "attribute7": {
+            "S": "30.03.2029"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "XS-00001-01-01"
+          },
+          "attribute10": {
+            "S": "exhaust_system"
+          },
+          "attribute11": {
+            "S": "I18N-00196"
+          },
+          "attribute12": {
+            "S": "DN-00001"
+          },
+          "attribute13": {
+            "S": "I18N-00058"
+          },
+          "attribute14": {
+            "S": "#NA_data"
+          },
+          "attribute15": {
+            "S": "#NA_data"
+          },
+          "attribute16": {
+            "S": "#NA_data"
+          },
+          "attribute17": {
+            "S": "P-00001"
+          },
+          "attribute18": {
+            "S": "#NA_data"
+          },
+          "attribute19": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "expansion_tank"
+          },
+          "id": {
+            "S": "XT-00001"
+          },
+          "gsi_1_pk": {
+            "S": "XT-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00002"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00002"
+          },
+          "attribute1": {
+            "S": "23.03.2023"
+          },
+          "attribute2": {
+            "S": "560,00€"
+          },
+          "attribute3": {
+            "S": "01.03.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "600,00€"
+          },
+          "attribute6": {
+            "S": "I18N-01439"
+          },
+          "attribute7": {
+            "S": "01.01.2029"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "I18N-00197"
+          },
+          "attribute10": {
+            "S": "<empty>"
+          },
+          "attribute11": {
+            "S": "DN-00002"
+          },
+          "attribute12": {
+            "S": "I18N-01410"
+          },
+          "attribute13": {
+            "S": "I18N-00146"
+          },
+          "attribute14": {
+            "S": "80"
+          },
+          "attribute15": {
+            "S": "I18N-00575"
+          },
+          "attribute16": {
+            "S": "P-00001"
+          },
+          "attribute17": {
+            "S": "124324"
+          },
+          "attribute18": {
+            "S": "23.04.2026"
+          },
+          "attribute19": {
+            "S": "#NA_data"
+          },
+          "attribute20": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "fitting"
+          },
+          "id": {
+            "S": "F-00001"
+          },
+          "gsi_1_pk": {
+            "S": "F-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00002"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00002"
+          },
+          "attribute1": {
+            "S": "25.03.2023"
+          },
+          "attribute2": {
+            "S": "750,00€"
+          },
+          "attribute3": {
+            "S": "01.03.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "780,00€"
+          },
+          "attribute6": {
+            "S": "#NA_data"
+          },
+          "attribute7": {
+            "S": "12.12.2029"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "I18N-00198"
+          },
+          "attribute10": {
+            "S": "DN-00002"
+          },
+          "attribute11": {
+            "S": "I18N-00150"
+          },
+          "attribute12": {
+            "S": "#NA_data"
+          },
+          "attribute13": {
+            "S": "#NA_data"
+          },
+          "attribute14": {
+            "S": "I18N-001493"
+          },
+          "attribute15": {
+            "S": "I18N-001483"
+          },
+          "attribute16": {
+            "S": "I18N-00623"
+          },
+          "attribute17": {
+            "S": "P-00001"
+          },
+          "attribute18": {
+            "S": "#NA_data"
+          },
+          "attribute19": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "fuel_tank"
+          },
+          "id": {
+            "S": "FT-00001"
+          },
+          "gsi_1_pk": {
+            "S": "FT-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00002"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00002"
+          },
+          "attribute1": {
+            "S": "I18N-000868"
+          },
+          "attribute2": {
+            "S": "15.02.2029"
+          },
+          "attribute3": {
+            "S": "31.01.2023"
+          },
+          "attribute4": {
+            "S": "2.130,00€"
+          },
+          "attribute5": {
+            "S": "2.000,00€"
+          },
+          "attribute6": {
+            "S": "Eluh"
+          },
+          "attribute7": {
+            "S": "15.01.2023"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "I18N-00199"
+          },
+          "attribute10": {
+            "S": "DN-00002"
+          },
+          "attribute11": {
+            "S": "I18N-00240"
+          },
+          "attribute12": {
+            "S": "I18N-00162"
+          },
+          "attribute13": {
+            "S": "I18N-00057"
+          },
+          "attribute14": {
+            "S": "2963"
+          },
+          "attribute15": {
+            "S": "lorem ipsum dolor sit amet"
+          },
+          "attribute16": {
+            "S": "I18N-00012"
+          },
+          "attribute17": {
+            "S": "I18N-00541"
+          },
+          "attribute18": {
+            "S": "P-00001"
+          },
+          "attribute19": {
+            "S": "2W81de2048-078e-4357-ad27-3ebe54a07442-fakeJK-2J"
+          },
+          "attribute20": {
+            "S": "1682047883"
+          },
+          "attribute21": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "heat_exchanger"
+          },
+          "id": {
+            "S": "HX-00007"
+          },
+          "gsi_1_pk": {
+            "S": "HX-00007"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00002"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00001"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00001"
+          },
+          "lsi_3": {
+            "S": "DN-00002"
+          },
+          "attribute1": {
+            "S": "15.01.2023"
+          },
+          "attribute2": {
+            "S": "450,00€"
+          },
+          "attribute3": {
+            "S": "01.01.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "460,00€"
+          },
+          "attribute6": {
+            "S": "I18N-01663"
+          },
+          "attribute7": {
+            "S": "01.01.2029"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "I18N-00200"
+          },
+          "attribute10": {
+            "S": "DN-00002"
+          },
+          "attribute11": {
+            "S": "I18N-001634"
+          },
+          "attribute12": {
+            "S": "#NA_data"
+          },
+          "attribute13": {
+            "S": "#NA_data"
+          },
+          "attribute14": {
+            "S": "#NA_data"
+          },
+          "attribute15": {
+            "S": "I18N-001631"
+          },
+          "attribute16": {
+            "S": "#NA_data"
+          },
+          "attribute17": {
+            "S": "#NA_data"
+          },
+          "attribute18": {
+            "S": "#NA_data"
+          },
+          "attribute19": {
+            "S": "#NA_data"
+          },
+          "attribute20": {
+            "S": "I18N-00545"
+          },
+          "attribute21": {
+            "S": "P-00001"
+          },
+          "attribute22": {
+            "S": "#NA_data"
+          },
+          "attribute23": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "hydraulic_switch"
+          },
+          "id": {
+            "S": "HSW-00001"
+          },
+          "gsi_1_pk": {
+            "S": "HSW-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00003"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00002"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00002"
+          },
+          "lsi_3": {
+            "S": "DN-00003"
+          },
+          "attribute1": {
+            "S": "I18N-01633"
+          },
+          "attribute2": {
+            "S": "01.01.2029"
+          },
+          "attribute3": {
+            "S": "01.02.2023"
+          },
+          "attribute4": {
+            "S": "1.677,00€"
+          },
+          "attribute5": {
+            "S": "2.455,00€"
+          },
+          "attribute6": {
+            "S": "Eluh"
+          },
+          "attribute7": {
+            "S": "15.01.2023"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "I18N-00201"
+          },
+          "attribute10": {
+            "S": "DN-00003"
+          },
+          "attribute11": {
+            "S": "#NA_data"
+          },
+          "attribute12": {
+            "S": "I18N-00088"
+          },
+          "attribute13": {
+            "S": "P-00002"
+          },
+          "attribute14": {
+            "S": "jhk"
+          },
+          "attribute15": {
+            "S": "13.02.2025"
+          },
+          "attribute16": {
+            "S": "2W2b2e7ac3-f2ed-4f7c-a29a-4ca7ece528c0-fakeJK-2F"
+          },
+          "attribute17": {
+            "S": "1625848679"
+          },
+          "attribute18": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "thermo_control"
+          },
+          "id": {
+            "S": "TC-00001"
+          },
+          "gsi_1_pk": {
+            "S": "TC-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00003"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00002"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00002"
+          },
+          "lsi_3": {
+            "S": "DN-00003"
+          },
+          "attribute1": {
+            "S": "I18N-000868"
+          },
+          "attribute2": {
+            "S": "01.01.2029"
+          },
+          "attribute3": {
+            "S": "15.01.2023"
+          },
+          "attribute4": {
+            "S": "1.000,00€"
+          },
+          "attribute5": {
+            "S": "980,00€"
+          },
+          "attribute6": {
+            "S": "I18N-00091"
+          },
+          "attribute7": {
+            "S": "01.01.2023"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "I18N-00204"
+          },
+          "attribute10": {
+            "S": "DN-00003"
+          },
+          "attribute11": {
+            "S": "I18N-00544"
+          },
+          "attribute12": {
+            "S": "P-00002"
+          },
+          "attribute13": {
+            "S": "1313123213"
+          },
+          "attribute14": {
+            "S": "I18N-00680"
+          },
+          "attribute15": {
+            "S": "I18N-00177"
+          },
+          "attribute16": {
+            "S": "I18N-00658"
+          },
+          "attribute17": {
+            "S": "."
+          },
+          "attribute18": {
+            "S": "1682047884"
+          },
+          "attribute19": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "water_storage"
+          },
+          "id": {
+            "S": "WST-00002"
+          },
+          "gsi_1_pk": {
+            "S": "WST-00002"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00003"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00002"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00002"
+          },
+          "lsi_3": {
+            "S": "DN-00003"
+          },
+          "attribute1": {
+            "S": "15.01.2023"
+          },
+          "attribute2": {
+            "S": "560,00€"
+          },
+          "attribute3": {
+            "S": "01.01.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "590,00€"
+          },
+          "attribute6": {
+            "S": "I18N-01976"
+          },
+          "attribute7": {
+            "S": "01.01.2029"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "I18N-00205"
+          },
+          "attribute10": {
+            "S": "DN-00003"
+          },
+          "attribute11": {
+            "S": "water_storage"
+          },
+          "attribute12": {
+            "S": "I18N-00091"
+          },
+          "attribute13": {
+            "S": "P-00002"
+          },
+          "attribute14": {
+            "S": "1"
+          },
+          "attribute15": {
+            "S": "05.12.2025"
+          },
+          "attribute16": {
+            "S": "#NA_data"
+          },
+          "attribute17": {
+            "S": "#NA_data"
+          },
+          "attribute18": {
+            "S": "#NA_data"
+          },
+          "attribute19": {
+            "S": "I18N-00058"
+          },
+          "attribute20": {
+            "S": "#NA_data"
+          },
+          "attribute21": {
+            "S": "#NA_data"
+          },
+          "attribute22": {
+            "S": "#NA_data"
+          },
+          "attribute23": {
+            "S": "#NA_data"
+          },
+          "attribute24": {
+            "S": "#NA_data"
+          },
+          "attribute25": {
+            "S": "I18N-00167"
+          },
+          "attribute26": {
+            "S": "300"
+          },
+          "attribute27": {
+            "S": "#NA_data"
+          },
+          "attribute28": {
+            "S": "#NA_data"
+          },
+          "attribute29": {
+            "S": "#NA_data"
+          },
+          "attribute30": {
+            "S": "#NA_data"
+          },
+          "attribute31": {
+            "S": "I18N-00168"
+          },
+          "attribute32": {
+            "S": "component"
+          }
+        },
+        {
+          "item_type": {
+            "S": "pressure_control"
+          },
+          "id": {
+            "S": "PC-00001"
+          },
+          "gsi_1_pk": {
+            "S": "PC-00001"
+          },
+          "gsi_2_pk": {
+            "S": "DN-00003"
+          },
+          "gsi_2_sk": {
+            "S": "component"
+          },
+          "gsi_3_pk": {
+            "S": "P-00002"
+          },
+          "gsi_3_sk": {
+            "S": "component"
+          },
+          "lsi_1": {
+            "S": "BUI-00001"
+          },
+          "lsi_2": {
+            "S": "P-00002"
+          },
+          "lsi_3": {
+            "S": "DN-00003"
+          },
+          "attribute1": {
+            "S": "15.01.2023"
+          },
+          "attribute2": {
+            "S": "450,00€"
+          },
+          "attribute3": {
+            "S": "01.01.2023"
+          },
+          "attribute4": {
+            "S": "Eluh"
+          },
+          "attribute5": {
+            "S": "460,00€"
+          },
+          "attribute6": {
+            "S": "#NA_data"
+          },
+          "attribute7": {
+            "S": "01.01.2029"
+          },
+          "attribute8": {
+            "S": "BUI-00001"
+          },
+          "attribute9": {
+            "S": "I18N-00202"
+          },
+          "attribute10": {
+            "S": "DN-00003"
+          },
+          "attribute11": {
+            "S": "I18N-00598"
+          },
+          "attribute12": {
+            "S": "P-00002"
+          },
+          "attribute13": {
+            "S": "#NA_data"
+          },
+          "attribute14": {
+            "S": "I18N-00184"
+          },
+          "attribute15": {
+            "S": "I18N-00237"
+          },
+          "attribute16": {
+            "S": "1"
+          },
+          "attribute17": {
+            "S": "12.02.2025"
+          },
+          "attribute18": {
+            "S": "#NA_data"
+          },
+          "attribute19": {
+            "S": "component"
+          }
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    }
+  ]
+}
