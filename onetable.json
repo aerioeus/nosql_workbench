@@ -1,0 +1,772 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "This template creates a DynamoDB table with incremental Backups (PITR)\n  Last Modified: 20.03.2024\n  Author: Exec <aerioeus@gmail.com>",
+    "Parameters": {
+      "Owner": {
+        "Description": "Individual Name Responsible for the Stack",
+        "Type": "AWS::SSM::Parameter::Value<String>",
+        "Default": "/energicos/LEAD-DEVELOPER_NAME"
+      },
+      "Project": {
+        "Description": "The project name",
+        "Type": "AWS::SSM::Parameter::Value<String>",
+        "Default": "/energicos/PROJECT_ASA"
+      },
+      "Subproject": {
+        "Description": "Enter Project Name",
+        "Type": "AWS::SSM::Parameter::Value<String>",
+        "Default": "/energicos/GLOBAL"
+      },
+      "EnvironmentName": {
+        "Description": "An environment name that will be prefixed to resource names",
+        "Type": "AWS::SSM::Parameter::Value<String>",
+        "Default": "/energicos/ENVIRONMENT_NAME"
+      },
+      "TableName1": {
+        "Description": "Name of the table",
+        "Type": "AWS::SSM::Parameter::Value<String>",
+        "Default": "/energicos/Table_4"
+      },
+      "TableName2": {
+        "Description": "Name of the table",
+        "Type": "AWS::SSM::Parameter::Value<String>",
+        "Default": "/energicos/Table_5"
+      },
+      "StringElementType": {
+        "Description": "String Attribute Type",
+        "Type": "String",
+        "Default": "S"
+      },
+      "PartitionKeyName": {
+        "Description": "HashType PrimaryKey Name",
+        "Type": "String",
+        "Default": "pk"
+      },
+      "PartitionKeyType1": {
+        "Description": "Type of the partition key/Hashkey",
+        "Type": "String",
+        "Default": "S"
+      },
+      "PartitionKeyType2": {
+        "Description": "Type of the partition key/Hashkey",
+        "Type": "String",
+        "Default": "N"
+      },
+      "PartitionKeyType3": {
+        "Description": "Type of the partition key/Hashkey",
+        "Type": "String",
+        "Default": "B"
+      },
+      "SortKeyName": {
+        "Description": "Optional name of the sort key; Timestamp",
+        "Type": "String",
+        "Default": "sk"
+      },
+      "SortKeyType": {
+        "Description": "Type of the sort key (if SortKeyName is set)",
+        "Type": "String",
+        "Default": "S"
+      },
+      "GlobalIndexName1": {
+        "Type": "String",
+        "Default": "gsi-1",
+        "Description": "The name of the global secondary index"
+      },
+      "GlobalIndexName2": {
+        "Type": "String",
+        "Default": "gsi-2",
+        "Description": "The name of the global secondary index"
+      },
+      "GlobalIndexName3": {
+        "Type": "String",
+        "Default": "gsi-3",
+        "Description": "The name of the global secondary index"
+      },
+      "GlobalIndexName4": {
+        "Type": "String",
+        "Default": "gsi-4",
+        "Description": "The name of the global secondary index"
+      },
+      "GlobalIndexName5": {
+        "Type": "String",
+        "Default": "gsi-5",
+        "Description": "The name of the global secondary index"
+      },
+      "GlobalIndexName6": {
+        "Type": "String",
+        "Default": "gsi-6",
+        "Description": "The name of the global secondary index"
+      },
+      "gsi1HashKeyName": {
+        "Description": "Global secondary index-1 hash key; Latitude",
+        "Type": "String",
+        "Default": "gsi1-pk"
+      },
+      "gsi1SortKeyName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "gsi1-sk"
+      },
+      "gsi2HashKeyName": {
+        "Description": "Global secondary index-1 hash key; Latitude",
+        "Type": "String",
+        "Default": "gsi2-pk"
+      },
+      "gsi2SortKeyName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "gsi2-sk"
+      },
+      "gsi3HashKeyName": {
+        "Description": "Global secondary index-1 hash key; Latitude",
+        "Type": "String",
+        "Default": "gsi3-pk"
+      },
+      "gsi3SortKeyName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "gsi3-sk"
+      },
+      "gsi4HashKeyName": {
+        "Description": "Global secondary index-1 hash key; Latitude",
+        "Type": "String",
+        "Default": "gsi4-pk"
+      },
+      "gsi4SortKeyName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "gsi4-sk"
+      },
+      "gsi5HashKeyName": {
+        "Description": "Global secondary index-1 hash key; Latitude",
+        "Type": "String",
+        "Default": "gsi5-pk"
+      },
+      "gsi5SortKeyName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "gsi5-sk"
+      },
+      "gsi6HashKeyName": {
+        "Description": "Global secondary index-1 hash key; Latitude",
+        "Type": "String",
+        "Default": "gsi6-pk"
+      },
+      "gsi6SortKeyName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "gsi6-sk"
+      },
+      "LocalIndexName1": {
+        "Description": "The name of the local secondary index",
+        "Type": "String",
+        "Default": "lsi-1"
+      },
+      "LocalIndexName2": {
+        "Description": "The name of the local secondary index",
+        "Type": "String",
+        "Default": "lsi-2"
+      },
+      "LocalIndexName3": {
+        "Description": "The name of the local secondary index",
+        "Type": "String",
+        "Default": "lsi-3"
+      },
+      "LocalIndexName4": {
+        "Description": "The name of the local secondary index",
+        "Type": "String",
+        "Default": "lsi-4"
+      },
+      "LocalIndexName5": {
+        "Description": "The name of the local secondary index",
+        "Type": "String",
+        "Default": "lsi-5"
+      },
+      "lsi1AttributeName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "lsi1-sk"
+      },
+      "lsi2AttributeName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "lsi2-sk"
+      },
+      "lsi3AttributeName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "lsi3-sk"
+      },
+      "lsi4AttributeName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "lsi4-sk"
+      },
+      "lsi5AttributeName": {
+        "Description": "Global secondary index-1 sort key; Longitude",
+        "Type": "String",
+        "Default": "lsi5-sk"
+      },
+      "AttributeName1": {
+        "Description": "Field for dates",
+        "Type": "String",
+        "Default": "Date"
+      },
+      "BillingAndScalingMode": {
+        "Description": "Specify how you are charged for read and write throughput and how you manage capacity.",
+        "Type": "String",
+        "Default": "PAY_PER_REQUEST",
+        "AllowedValues": [
+          "PROVISIONED",
+          "PAY_PER_REQUEST"
+        ]
+      }
+    },
+    "Resources": {
+      "OneTable": {
+        "Type": "AWS::DynamoDB::Table",
+        "Properties": {
+          "TableName": {
+            "Fn::Sub": "${TableName1}"
+          },
+          "AttributeDefinitions": [
+            {
+              "AttributeName": {
+                "Ref": "PartitionKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "SortKeyName"
+              },
+              "AttributeType": {
+                "Ref": "SortKeyType"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi1HashKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi1SortKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi2HashKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType2"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi2SortKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi3HashKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi3SortKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi4HashKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi4SortKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi5HashKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi5SortKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi6HashKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "gsi6SortKeyName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "lsi1AttributeName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "lsi2AttributeName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "lsi3AttributeName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "lsi4AttributeName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            },
+            {
+              "AttributeName": {
+                "Ref": "lsi5AttributeName"
+              },
+              "AttributeType": {
+                "Ref": "PartitionKeyType1"
+              }
+            }
+          ],
+          "KeySchema": [
+            {
+              "AttributeName": {
+                "Ref": "PartitionKeyName"
+              },
+              "KeyType": "HASH"
+            },
+            {
+              "AttributeName": {
+                "Ref": "SortKeyName"
+              },
+              "KeyType": "RANGE"
+            }
+          ],
+          "GlobalSecondaryIndexes": [
+            {
+              "IndexName": {
+                "Ref": "GlobalIndexName1"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "gsi1HashKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "gsi1SortKeyName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "NonKeyAttributes": [
+                  {
+                    "Ref": "AttributeName1"
+                  }
+                ],
+                "ProjectionType": "INCLUDE"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "GlobalIndexName2"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "gsi2HashKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "gsi2SortKeyName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "GlobalIndexName3"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "gsi3HashKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "gsi3SortKeyName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "GlobalIndexName4"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "gsi4HashKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "gsi4SortKeyName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "GlobalIndexName5"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "gsi5HashKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "gsi5SortKeyName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "GlobalIndexName6"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "gsi6HashKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "gsi6SortKeyName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            }
+          ],
+          "LocalSecondaryIndexes": [
+            {
+              "IndexName": {
+                "Ref": "LocalIndexName1"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "PartitionKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "lsi1AttributeName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "LocalIndexName2"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "PartitionKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "lsi2AttributeName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "LocalIndexName3"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "PartitionKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "lsi3AttributeName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "LocalIndexName4"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "PartitionKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "lsi4AttributeName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            },
+            {
+              "IndexName": {
+                "Ref": "LocalIndexName5"
+              },
+              "KeySchema": [
+                {
+                  "AttributeName": {
+                    "Ref": "PartitionKeyName"
+                  },
+                  "KeyType": "HASH"
+                },
+                {
+                  "AttributeName": {
+                    "Ref": "lsi5AttributeName"
+                  },
+                  "KeyType": "RANGE"
+                }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              }
+            }
+          ],
+          "BillingMode": {
+            "Ref": "BillingAndScalingMode"
+          },
+          "PointInTimeRecoverySpecification": {
+            "PointInTimeRecoveryEnabled": true
+          },
+          "SSESpecification": {
+            "SSEEnabled": true
+          },
+          "StreamSpecification": {
+            "StreamViewType": "NEW_IMAGE"
+          },
+          "Tags": [
+            {
+              "Key": "Name",
+              "Value": {
+                "Ref": "TableName1"
+              }
+            },
+            {
+              "Key": "Name",
+              "Value": {
+                "Ref": "Project"
+              }
+            },
+            {
+              "Key": "backup",
+              "Value": "thinbackup"
+            }
+          ]
+        }
+      },
+      "RestrictedDynamoDBRole": {
+        "Type": "AWS::IAM::Role",
+        "Properties": {
+          "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Effect": "Allow",
+                "Principal": {
+                  "Service": [
+                    "lambda.amazonaws.com"
+                  ]
+                },
+                "Action": [
+                  "sts:AssumeRole"
+                ]
+              }
+            ]
+          },
+          "Path": "/",
+          "Policies": [
+            {
+              "PolicyName": "DenyFullTableScanPolicy",
+              "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Sid": "DenyFullTableScanUnlessUsingIndex",
+                    "Effect": "Deny",
+                    "Action": "dynamodb:Scan",
+                    "Resource": {
+                      "Fn::GetAtt": [
+                        "OneTable",
+                        "Arn"
+                      ]
+                    },
+                    "Condition": {
+                      "ForAnyValue:StringNotEquals": {
+                        "dynamodb:IndexName": [
+                          "lsi1",
+                          "lsi2",
+                          "lsi3",
+                          "lsi4",
+                          "lsi5",
+                          "gsi1",
+                          "gsi2",
+                          "gsi3",
+                          "gsi4",
+                          "gsi5",
+                          "gsi6"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "Outputs": {
+      "TableName1": {
+        "Description": "Table name of the DynamoDB table",
+        "Value": {
+          "Ref": "OneTable"
+        },
+        "Export": {
+          "Name": {
+            "Fn::Sub": "${Project}-${TableName1}Table"
+          }
+        }
+      },
+      "TableArn1": {
+        "Description": "Amazon Resource Name (ARN) of the DynamoDB table",
+        "Value": {
+          "Fn::GetAtt": [
+            "OneTable",
+            "Arn"
+          ]
+        },
+        "Export": {
+          "Name": {
+            "Fn::Sub": "${Project}-${TableName1}TableARN"
+          }
+        }
+      }
+    }
+  }
+  
